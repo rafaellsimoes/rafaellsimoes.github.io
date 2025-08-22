@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Semana da Estatística 2025 - ICET/UFMT. Evento anual com palestras, workshops e integração para estudantes, profissionais e interessados em Estatística e Ciência de Dados.">
+    <meta name="keywords" content="Estatística, UFMT, ICET, evento, ciência de dados, workshop, palestra, sustentabilidade, programação, inscrição">
+    <meta name="author" content="Departamento de Estatística - UFMT">
+    <meta name="robots" content="index, follow">
+    
+    <link rel="icon" type="image/png" href="estatistica_ufmt.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <title>Semana da Estatística - ICET/UFMT</title>
+    
+    <!-- Estilos CSS personalizados -->
+    <style>
+        /* Estilo Geral da Página */
+        :root {
+            --primary-color: #1a4b8c; 
+            --secondary-color: #2e7d32;
+            --accent-color: #8bc34a;
+            --text-color: #000000;   
+            --pattern-color: rgba(255,255,255,0.07);
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        /* Body branco, texto preto */
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background: #ffffff;   /* branco */
+            color: var(--text-color);
+            position: relative;
+        }
+
+        /* Header azul, texto branco */
+        header { 
+            background: var(--primary-color); 
+            color: #ffffff; 
+            padding: 2rem 1rem 3rem; 
+            text-align: center; 
+            overflow: hidden; 
+            position: relative; 
+        }
+        
+        /* Footer azul, texto branco */
+        footer { 
+            background: var(--primary-color); 
+            color: #ffffff; 
+            padding: 2rem; 
+            margin-top: auto; 
+            backdrop-filter: blur(5px); 
+            border-top: 1px solid rgba(255, 255, 255, 0.1); 
+            position: relative;
+        }
+        
+    
+        h1 {
+            font-family: 'Orbitron', monospace;
+            color: #ffffff; /* Branco sólido */
+            font-weight: 900;
+            font-size: 2.8rem;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            letter-spacing: 3px;
+        }
+        
+        h2 {
+            font-family: 'Orbitron', monospace;
+            color: #1a4b8c; /* Azul sólido */
+            font-weight: 700;
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            display: inline-block;
+            letter-spacing: 2px;
+        }
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -8px; left: 0;
+            width: 60px; height: 4px;
+            background: #1a4b8c; border-radius: 2px;
+        }
+        h3 {
+            font-family: 'Orbitron', monospace;
+            color: #1a4b8c; /* Azul sólido */
+            font-weight: 500;
+            font-size: 1.7rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            letter-spacing: 1.5px;
+        }
+        h4 {
+            font-family: 'Orbitron', monospace;
+            color: #1a4b8c; /* Azul sólido */
+            font-weight: 400;
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            letter-spacing: 1px;
+        }
+        h5 { color: #ffffff; font-weight: 400; font-size: 1rem; text-align: center; margin-bottom: 1rem; }
+        p { margin-bottom: 1.5rem; }
+        
+        .header-logos {
+            display: flex; 
+            justify-content: center; 
+            align-items: center;
+            gap: 2rem; 
+            margin-bottom: 2rem; 
+            flex-wrap: wrap;
+        }
+        .header-logos img {
+            height: 80px; 
+            width: auto; 
+            object-fit: contain;
+        }
+
+        .logo-mono { filter: brightness(0) invert(1); }
+        
+        .logo-placeholder {
+            width: 180px; height: 80px; background: rgba(255,255,255,0.1);
+            border: 2px dashed rgba(255,255,255,0.3);
+            display: flex; align-items: center; justify-content: center;
+            color: rgba(255,255,255,0.5); font-size: 0.8rem; border-radius: 8px;
+        }
+        
+        .lead { font-size: 1.25rem; font-weight: 300; margin-bottom: 0; opacity: 0.9; }
+        
+        /* Container Principal */
+        main.main-container { max-width: 1200px; margin: 0 auto; padding: 2rem; flex: 1; background: transparent; }
+        .content-section {
+            padding: 2rem; 
+            background: rgba(26, 75, 140, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 16px; 
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+            border: 1px solid rgba(26, 75, 140, 0.08); 
+            margin-bottom: 2rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            color: var(--text-color);
+        }
+        .content-section:hover { transform: translateY(-5px); box-shadow: 0 12px 40px rgba(0, 0, 0, 0.10); }
+
+        .sidebar { padding-right: 2rem; }
+        .btn-sidebar {
+            width: 100%; margin-bottom: 1rem; text-align: left; padding: 0.75rem 1.5rem;
+            border-radius: 8px; transition: all 0.3s ease; font-weight: 500; border: none;
+            background: rgba(26, 75, 140, 0.08); color: #000000;
+        }
+        .btn-sidebar:hover { background: rgba(26, 75, 140, 0.25); transform: translateX(5px); color: #000; }
+        .btn-sidebar.active { background: #1a4b8c; color: #ffffff; font-weight: 600; }
+        
+        /* Tabela */
+        .modern-table {
+            width: 100%; border-collapse: collapse; margin: 20px 0; font-family: 'Poppins', sans-serif;
+            background: rgba(26, 75, 140, 0.05);
+            border-radius: 10px; overflow: hidden; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+        .modern-table th {
+            background-color: rgba(26, 75, 140, 0.15); color: #000; padding: 15px; text-align: left;
+            font-weight: 600; border-bottom: 2px solid rgba(26, 75, 140, 0.2);
+        }
+        .modern-table td { padding: 15px; border-bottom: 1px solid rgba(26, 75, 140, 0.12); vertical-align: middle; color: #000; }
+        .modern-table tr:last-child td { border-bottom: none; }
+        .modern-table tr:hover { background-color: rgba(26, 75, 140, 0.08); }
+        .table-link { color: #0066ff; text-decoration: none; transition: all 0.3s ease; display: inline-flex; align-items: center; gap: 8px; font-weight: 500; }
+        .table-link:hover { color: #1a4b8c; transform: translateX(3px); }
+        .text-center { text-align: center; }
+        .table-responsive { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+        
+        /* Cards de programação */
+        .event-card {
+            background: rgba(26, 75, 140, 0.05); 
+            border-radius: 12px; 
+            padding: 1.5rem; 
+            margin-bottom: 1.5rem;
+            border-left: 4px solid var(--accent-color); 
+            transition: all 0.3s ease;
+            color: #000;
+        }
+        .event-card:hover { background: rgba(26, 75, 140, 0.10); transform: translateY(-3px); }
+        .event-time { font-weight: 600; color: #1a4b8c; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
+        .event-title { font-weight: 600; font-size: 1.2rem; margin-bottom: 0.5rem; }
+        .event-speaker { font-style: italic; opacity: 0.9; margin-bottom: 0.5rem; }
+        
+        /* Texto e Links */
+        .texto-branco { color: #000000; text-align: justify; text-justify: inter-word; font-weight: 300; }
+        .link-rodape { color: #0066ff; text-decoration: none; font-weight: 500; transition: all 0.3s ease; display: inline-block; margin-top: 1rem; }
+        .link-rodape:hover { color: #1a4b8c; transform: translateX(5px); }
+        
+        /* Rodapé */
+        .footer-content { display: flex; flex-direction: column; align-items: center; gap: 1.5rem; position: relative; }
+        .footer-logos { 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            gap: 2rem; 
+            margin-bottom: 1rem; 
+            flex-wrap: wrap; 
+        }
+        .footer-logos img { 
+            height: 60px; 
+            width: auto; 
+            object-fit: contain; 
+            filter: brightness(0) invert(1);
+        }
+        .social-links { display: flex; gap: 1.5rem; margin-top: 1rem; }
+        .social-links a { color: #220a9e; font-size: 1.5rem; transition: all 0.3s ease; }
+        .social-links a:hover { color: var(--accent-color); transform: translateY(-3px); }
+        .external-links { display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center; }
+        .external-links a { color: #ffffff; text-decoration: none; transition: all 0.3s ease; display: flex; align-items: center; gap: 0.5rem; }
+        .external-links a:hover { color: var(--accent-color); }
+        
+   
+        .badge-event {
+            background-color: rgba(26, 75, 140, 0.15); color: #1a4b8c; font-weight: 600;
+            padding: 0.35rem 0.75rem; border-radius: 50px; font-size: 0.8rem; margin-left: 0.5rem; vertical-align: middle;
+        }
+        .highlight-box {
+            background: rgba(26, 75, 140, 0.06); border-radius: 10px; padding: 1.5rem; margin: 1.5rem 0; border-left: 4px solid #1a4b8c; color: #000;
+        }
+        
+      
+        .confirmation-field {
+            background: rgba(26, 75, 140, 0.06); border: 2px dashed rgba(26, 75, 140, 0.25);
+            padding: 1rem; border-radius: 8px; margin-bottom: 1rem; text-align: center; color: #000;
+        }
+        .confirmation-field strong { display: block; margin-bottom: 0.5rem; color: #1a4b8c; }
+        
+      
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.75rem; }
+            .content-section { padding: 1.5rem; }
+            .header-logos, .footer-logos { flex-direction: column; gap: 1rem; }
+            .header-logos img, .footer-logos img { height: 60px; }
+            .sidebar { padding-right: 0; margin-bottom: 2rem; }
+        }
+        
+      
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        .animate-in { animation: fadeIn 0.6s ease-out forwards; }
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
+        
+       
+        .logos-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto 2rem;
+        }
+        
+        .logo-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            flex: 1;
+        }
+        
+        .logo-ufmt {
+            height: 170px;
+            filter: brightness(0) invert(1);
+        }
+        
+        .logo-estatistica {
+            height: 170px;
+            filter: brightness(0) invert(1);
+        }
+        
+        .logo-nic {
+            height: 220px;
+        }
+        
+        @media (max-width: 992px) {
+            .logos-container {
+                flex-direction: column;
+                gap: 2rem;
+            }
+            
+            .logo-ufmt, .logo-estatistica, .logo-nic {
+                height: 140px;
+            }
+        }
+        
+        /* Estilos para a tabela de programação */
+        .programacao-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-family: 'Poppins', sans-serif;
+            background: rgba(26, 75, 140, 0.05);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+        
+        .programacao-table th {
+            background-color: rgba(26, 75, 140, 0.15);
+            color: #000;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+            border-bottom: 2px solid rgba(26, 75, 140, 0.2);
+        }
+        
+        .programacao-table td {
+            padding: 15px;
+            border-bottom: 1px solid rgba(26, 75, 140, 0.12);
+            vertical-align: top;
+            color: #000;
+        }
+        
+        .programacao-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .programacao-table tr:hover {
+            background-color: rgba(26, 75, 140, 0.08);
+        }
+        
+        .dia-header {
+            background-color: rgba(26, 75, 140, 0.2) !important;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+        
+        .horario {
+            font-weight: 600;
+            color: #1a4b8c;
+            white-space: nowrap;
+            width: 120px;
+        }
+        
+        .atividade {
+            font-weight: 500;
+        }
+        
+        .palestrante {
+            font-style: italic;
+            opacity: 0.9;
+            margin-top: 5px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Cabeçalho da página -->
+    <header>
+        <!-- Logos perfeitamente alinhadas -->
+        <div class="logos-container">
+            <div class="logo-item">
+                <img src="ufmt_logo.png" alt="UFMT" class="logo-ufmt">
+            </div>
+            <div class="logo-item">
+                <img src="estatistica_ufmt.png" alt="Estatística UFMT" class="logo-estatistica">
+            </div>
+            <div class="logo-item">
+                <img src="logo_nic.png" alt="NIC.br - Núcleo de Informação e Coordenação do Ponto BR" class="logo-nic">
+            </div>
+        </div>
+        
+        <div class="container">
+            <h1 class="animate-in">X Semana da Estatística</h1>
+            <p class="lead animate-in delay-1">"Estatística e ciência de dados: Campos de atuação e aplicações."</p>
+            
+            <div class="row mt-4 justify-content-center">
+                <div class="col-md-6">
+                    <div class="confirmation-field animate-in delay-2">
+                        <strong>Semana da Estatística</strong>
+                        <div>21 a 24 de Outubro de 2025</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main class="main-container">
+        <div class="row">
+            <!-- Sidebar com botões -->
+            <div class="col-lg-3 sidebar">
+                <div class="content-section animate-in delay-1">
+                    <h3>Menu</h3>
+                    <div class="d-grid gap-2">
+                        <a href="#sobre" class="btn btn-sidebar active"><i class="fas fa-info-circle me-2"></i>Sobre o Evento</a>
+                        <a href="#programacao" class="btn btn-sidebar"><i class="fas fa-calendar-alt me-2"></i>Programação</a>
+                        <a href="#contato" class="btn btn-sidebar"><i class="fas fa-envelope me-2"></i>Contato</a>
+                    </div>
+                    
+                    <div class="highlight-box mt-4 animate-in delay-2">
+                        <p>Inscrições com certificado de participação!</p>
+                        <a href="#inscricao" class="btn btn-success w-100 mt-2">Inscreva-se</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-9">
+                <!-- Sobre o Evento -->
+                <section id="sobre" class="content-section animate-in">
+                    <h2>X Semana da Estatística da Universidade Federal de Mato Grosso</h2>
+                    <p class="texto-branco"> 
+                        <strong>"Estatística e ciência de dados: Campos de atuação e aplicações."</strong>.</p>
+
+                    <p class="texto-branco"> 
+                        A Semana da Estatística (SEMEST) da Universidade Federal de Mato Grosso (UFMT) é um evento acadêmico anual que tem como objetivo reunir pesquisadores,
+                         profissionais e egressos do curso de Estatística para compartilhar experiências no mundo acadêmico e no mercado de trabalho.</p>
+                    <p class="texto-branco"> 
+                        A décima edição do evento terá como tema "Estatística e Ciência de Dados: campos de atuação e aplicações", 
+                        trazendo para o debate as discussões mais recentes sobre o papel da estatística em diferentes dimensões da vida social. 
+                        Afinal, os dados estão presentes em praticamente todas as esferas das relações humanas.</p>
+
+                    <p class="texto-branco"> 
+                        No âmbito acadêmico, a estatística é essencial em testes de medicamentos, no planejamento urbano e regional, em pesquisas sobre desigualdades sociais 
+                        e na avaliação de políticas públicas. No cotidiano, aparece constantemente nas mídias: seja nas manchetes sobre inflação, no monitoramento do trânsito,
+                         nas técnicas de plantio agrícola ou nas probabilidades de ganhar em jogos de loteria. Já nas empresas, as estatísticas orientam a definição do perfil 
+                         de consumo de clientes, os padrões de compras em lojas virtuais e a avaliação de desempenho de funcionários. Além disso, também estão presentes nos
+                          algoritmos que recomendam perfis em redes sociais ou sugerem músicas e filmes em aplicativos digitais.</p>
+
+                    <p class="texto-branco"> 
+                       Nesse contexto, a SEMEST constitui, para muitos estudantes da UFMT, a primeira experiência em um evento acadêmico da área. 
+                       Mais do que um espaço de aprendizado, ela promove o contato direto com profissionais e pesquisadores atuantes, ampliando a compreensão
+                        sobre as múltiplas aplicações da estatística e da ciência de dados no campo acadêmico ou do mercado de trabalho.
+                         Assim, o evento contribui não apenas para a formação acadêmica, mas também para a preparação dos futuros estatísticos diante
+                          dos desafios e oportunidades do mercado de trabalho e da pesquisa.</p>
+                    <p class="texto-branco"> 
+                       Nesse contexto, a Semest constitui, para muitos estudantes da UFMT, a primeira experiência em um evento acadêmico da área. 
+                       Mais do que um espaço de aprendizado, ela promove o contato direto com profissionais e pesquisadores atuantes, ampliando a compreensão
+                        sobre as múltiplas aplicações da estatística e da ciência de dados no campo acadêmico ou do mercado de trabalho.
+                         Assim, o evento contribui não apenas para a formação acadêmica, mas também para a preparação dos futuros estatísticos diante
+                          dos desafios e oportunidades do mercado de trabalho e da pesquisa.</p>
+                    <p class="texto-branco">
+                        Por fim, a SEMEST é também um espaço para a formação crítica dos estudantes, momento em que eles podem interagir com os 
+                        demais membros da comunidade acadêmica e com os convidados, fazendo reflexões das contribuições que se pode dar aos problemas do nosso tempo. 
+                    </p>
+                </section>
+                
+                <!-- Programação em formato de tabela -->
+                <section id="programacao" class="content-section animate-in delay-1">
+                    <h2>Programação <span class="badge-event">Atualizado em 22/08/2025</span></h2>
+                    
+                    <div class="table-responsive">
+                        <table class="programacao-table">
+                            <thead>
+                                <tr>
+                                    <th>Data</th>
+                                    <th>Horário</th>
+                                    <th>Atividade</th>
+                                    <th>Palestrante/Responsável</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Dia 21 -->
+                                <tr class="dia-header">
+                                    <td colspan="4">21 de outubro de 2025 - Abertura Oficial</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td class="horario">18:30 – 19:00</td>
+                                    <td class="atividade">Mesa de Abertura</td>
+                                    <td class="palestrante">Convidados: Reitoria, Coordenação do Curso de Estatística, Departamento de Estatística e Patrocinadores</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td class="horario">19:00 – 20:15</td>
+                                    <td class="atividade">Palestra 1: "ChatPP: IA e Políticas Públicas"</td>
+                                    <td class="palestrante">Convidado: Dr. Paulo Jannuzzi (ENCE/IBGE) – A confirmar</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td class="horario">20:15 – 20:45</td>
+                                    <td class="atividade">Coffee Break</td>
+                                    <td class="palestrante"></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td class="horario">20:45 – 21:45</td>
+                                    <td class="atividade">Palestra 2: "Tema a Definir"</td>
+                                    <td class="palestrante">Hugo Braghetto – Banco do Brasil</td>
+                                </tr>
+                                
+                                <!-- Dia 22 -->
+                                <tr class="dia-header">
+                                    <td colspan="4">22 de outubro de 2025</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td class="horario">18:30 – 19:00</td>
+                                    <td class="atividade">Sessão Pôster</td>
+                                    <td class="palestrante">Divulgação de trabalhos da comunidade acadêmica</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td class="horario">19:00 – 20:15</td>
+                                    <td class="atividade">Palestra 3: "Plano Nacional de Inteligência Artificial"</td>
+                                    <td class="palestrante">Convidado: Dr. Hugo Valadares (MCTI) – A confirmar</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td class="horario">20:15 – 20:45</td>
+                                    <td class="atividade">Coffee Break</td>
+                                    <td class="palestrante"></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td class="horario">20:45 – 21:45</td>
+                                    <td class="atividade">Palestra 4: "Censo 2022: Favelas e Comunidades Urbanas"</td>
+                                    <td class="palestrante">Convidada: Ma. Larissa Catalá (IBGE)</td>
+                                </tr>
+                                
+                                <!-- Dia 23 -->
+                                <tr class="dia-header">
+                                    <td colspan="4">23 de outubro de 2025</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td class="horario">18:30 – 19:00</td>
+                                    <td class="atividade">Sessão Pôster</td>
+                                    <td class="palestrante">Divulgação de trabalhos da comunidade acadêmica</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td class="horario">19:00 – 20:15</td>
+                                    <td class="atividade">Palestra 5: "O Conselho Regional de Estatística: atuação profissional do Estatístico"</td>
+                                    <td class="palestrante">Convidado: Estênio Andrade (CONRE-1)</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td class="horario">20:15 – 20:45</td>
+                                    <td class="atividade">Coffee Break</td>
+                                    <td class="palestrante"></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td class="horario">20:45 – 21:45</td>
+                                    <td class="atividade">Palestra 6: "Estatura das crianças e raça/cor das mães"</td>
+                                    <td class="palestrante">Convidada: Dra. Juliana Freitas (CIDACS – FioCruz) – A confirmar</td>
+                                </tr>
+                                
+                                <!-- Dia 24 -->
+                                <tr class="dia-header">
+                                    <td colspan="4">24 de outubro de 2025</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td class="horario">A definir</td>
+                                    <td class="atividade">Mini-cursos</td>
+                                    <td class="palestrante">Detalhes em breve</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+                
+                <!-- Inscrições -->
+                <section id="inscricao" class="content-section animate-in delay-1">
+                    <h2>Inscrições</h2>
+                    <div class="row">
+                        
+                            <div class="event-card">
+                                <h4><i class="fas fa-user-graduate me-2"></i>Sobre as Inscrições</h4>
+
+                                <p class="texto-branco">Inscrições gratuitas para estudantes de graduação, pós-graduação, servidores públicos, profissionais e demais interessados.
+                                     Certificado de participação com carga horária.</p>
+                                <a href="#" class="btn btn-success w-100 mt-2">Inscreva-se na X Semana de Estatística da UFMT</a>
+                            </div>
+                        
+                        
+                    </div>
+                    
+                    <div class="highlight-box mt-4">
+                        <h4><i class="fas fa-certificate me-2"></i>Certificados</h4>
+                        <p class="texto-branco">Certificado Emitidos pela Pró-Reitoria de Cultura, Extensão e Vivência da UFMT</p>
+                    </div>
+                </section>
+                
+                <!-- Contato -->
+                <section id="contato" class="content-section animate-in delay-1">
+                    <h2>Contato e Organização</h2>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="event-card h-100">
+                                <h4><i class="fas fa-envelope me-2"></i>Contato</h4>
+                                <p class="texto-branco">Para dúvidas sobre o evento:</p>
+                                <p><i class="fas fa-envelope me-2"></i> ulisses.ferreira@ufmt.br</p>
+                                <div class="social-links mt-3 justify-content-start">
+                                    <a href="https://www.instagram.com/estatistica.ufmt/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="event-card h-100">
+                                <h4><i class="fas fa-users me-2"></i>Comissão Organizadora</h4>
+                                <ul class="texto-branco">
+                                    <li>Prof. 1 (Coordenador)</li>
+                                    <li>Prof. 2</li>
+                                    <li>Prof. 3</li>
+                                    <li>Estudante 1</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Rodapé da página -->
+    <footer>
+        <div class="footer-content">
+            <!-- Logos perfeitamente alinhadas no rodapé -->
+            <div class="logos-container">
+                <div class="logo-item">
+                    <img src="ufmt_logo.png" alt="UFMT" class="logo-ufmt">
+                </div>
+                <div class="logo-item">
+                    <img src="estatistica_ufmt.png" alt="Estatística UFMT" class="logo-estatistica">
+                </div>
+                <div class="logo-item">
+                    <img src="logo_nic.png" alt="NIC.br - Núcleo de Informação e Coordenação do Ponto BR" class="logo-nic">
+                </div>
+            </div>
+            
+            <div class="external-links">
+                <a href="https://ufmt.br/" target="_blank"><i class="fas fa-external-link-alt"></i> Site Oficial da UFMT</a>
+                <a href="https://www.ufmt.br/unidade/icet" target="_blank"><i class="fas fa-external-link-alt"></i> ICET/UFMT</a>
+                <a href="https://www.ufmt.br/unidade/icet/departamentos/dest" target="_blank"><i class="fas fa-external-link-alt"></i> Departamento de Estatística</a>
+            </div>
+            
+            <h5>© 2025 - Semana da Estatística - ICET/UFMT | Todos os direitos reservados</h5>
+        </div>
+    </footer>
+
+    <!-- Scripts Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Script para animação ao rolar a página -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-in');
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            document.querySelectorAll('section').forEach(section => observer.observe(section));
+        });
+    </script>
+</body>
+</html>
