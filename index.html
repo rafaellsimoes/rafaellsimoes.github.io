@@ -244,7 +244,41 @@
         }
         .confirmation-field strong { display: block; margin-bottom: 0.4rem; color: #1a4b8c; }
         
-      
+        /* Estilos para a programação em cards (mobile) */
+        .programacao-cards {
+            display: none;
+        }
+        
+        .dia-card {
+            background: rgba(26, 75, 140, 0.1);
+            border-radius: 10px;
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+            font-weight: bold;
+            text-align: center;
+        }
+        
+        .atividade-card {
+            background: rgba(26, 75, 140, 0.05);
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-left: 3px solid var(--accent-color);
+        }
+        
+        .horario-card {
+            font-weight: 600;
+            color: #1a4b8c;
+            margin-bottom: 0.5rem;
+        }
+        
+        .palestrante-card {
+            font-style: italic;
+            opacity: 0.9;
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+        }
+        
         @media (max-width: 768px) {
             h1 { font-size: 1.8rem; letter-spacing: 1px; }
             h2 { font-size: 1.5rem; }
@@ -295,24 +329,13 @@
                 padding-right: 0.5rem;
             }
             
-            /* Ajustes para a tabela em mobile */
+            /* Ajustes para a tabela em mobile - ESCONDER TABELA E MOSTRAR CARDS */
             .programacao-table {
-                font-size: 0.8rem;
+                display: none;
             }
             
-            .programacao-table th,
-            .programacao-table td {
-                padding: 8px 6px;
-            }
-            
-            .horario {
-                width: auto;
-                white-space: normal;
-            }
-            
-            .dia-header td {
-                font-size: 0.9rem;
-                padding: 10px 6px;
+            .programacao-cards {
+                display: block;
             }
             
             /* Ajuste para as logos no header e footer */
@@ -341,15 +364,6 @@
                 padding: 1rem;
             }
             
-            .programacao-table {
-                font-size: 0.75rem;
-            }
-            
-            .programacao-table th,
-            .programacao-table td {
-                padding: 6px 4px;
-            }
-            
             .logo-ufmt, .logo-estatistica, .logo-nic {
                 height: 80px;
             }
@@ -376,63 +390,20 @@
                 margin: 0.5rem 0 0 0;
                 width: fit-content;
             }
+            
+            .atividade-card {
+                padding: 0.8rem;
+            }
         }
         
-        /* Melhorias para a tabela em dispositivos móveis */
-        @media (max-width: 576px) {
+        /* Ajustes para desktop - garantir que a tabela seja visível */
+        @media (min-width: 769px) {
             .programacao-table {
-                display: block;
-                width: 100%;
+                display: table;
             }
             
-            .programacao-table thead {
+            .programacao-cards {
                 display: none;
-            }
-            
-            .programacao-table tr {
-                display: block;
-                margin-bottom: 1rem;
-                border-bottom: 2px solid rgba(26, 75, 140, 0.2);
-            }
-            
-            .programacao-table tr.dia-header {
-                display: table-row;
-                border-bottom: none;
-            }
-            
-            .programacao-table tr.dia-header td {
-                display: table-cell;
-                padding: 10px;
-                text-align: center;
-                font-weight: bold;
-            }
-            
-            .programacao-table td {
-                display: block;
-                text-align: right;
-                padding: 8px;
-                position: relative;
-                padding-left: 50%;
-            }
-            
-            .programacao-table td::before {
-                content: attr(data-label);
-                position: absolute;
-                left: 8px;
-                width: 45%;
-                padding-right: 10px;
-                white-space: nowrap;
-                text-align: left;
-                font-weight: bold;
-            }
-            
-            /* Esconder o pseudo-elemento para a linha de cabeçalho do dia */
-            .programacao-table tr.dia-header td::before {
-                display: none;
-            }
-            
-            .horario {
-                white-space: normal;
             }
         }
         
@@ -484,71 +455,6 @@
             .logo-ufmt, .logo-estatistica, .logo-nic {
                 height: 120px;
             }
-        }
-        
-        /* Estilos para a tabela de programação */
-        .programacao-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 15px 0;
-            font-family: 'Poppins', sans-serif;
-            background: rgba(26, 75, 140, 0.05);
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
-        }
-        
-        .programacao-table th {
-            background-color: rgba(26, 75, 140, 0.15);
-            color: #000;
-            padding: 12px;
-            text-align: left;
-            font-weight: 600;
-            border-bottom: 2px solid rgba(26, 75, 140, 0.2);
-        }
-        
-        .programacao-table td {
-            padding: 12px;
-            border-bottom: 1px solid rgba(26, 75, 140, 0.12);
-            vertical-align: top;
-            color: #000;
-        }
-        
-        .programacao-table tr:last-child td {
-            border-bottom: none;
-        }
-        
-        .programacao-table tr:hover {
-            background-color: rgba(26, 75, 140, 0.08);
-        }
-        
-        .dia-header {
-            background-color: rgba(26, 75, 140, 0.2) !important;
-            font-weight: 700;
-            font-size: 1rem;
-        }
-        
-        .horario {
-            font-weight: 600;
-            color: #1a4b8c;
-            white-space: nowrap;
-            width: 100px;
-        }
-        
-        .atividade {
-            font-weight: 500;
-        }
-        
-        .palestrante {
-            font-style: italic;
-            opacity: 0.9;
-            margin-top: 5px;
-            font-size: 0.85rem;
-        }
-        
-        /* Adicionando labels para a tabela responsiva */
-        .programacao-table td[data-label] {
-            text-align: right;
         }
     </style>
 </head>
@@ -622,7 +528,7 @@
                     <p class="texto-branco"> 
                         No âmbito acadêmico, a estatística é essencial em testes de medicamentos, no planejamento urbano e regional, em pesquisas sobre desigualdades sociais 
                         e na avaliação de políticas públicas. No cotidiano, aparece constantemente nas mídias: seja nas manchetes sobre inflação, no monitoramento do trânsito,
-                         nas técnicas de plantio agrícola ou nas probabilidades de ganhar em jogos de loteria. Já nas empresas, as estatísticas orientam a definição do perfil 
+                         nas técnicas de plantio agrícola ou nas probabilidades de ganhar em jogos de loteria. Já nas empresas, as estatísticas orientan a definição do perfil 
                          de consumo de clientes, os padrões de compras em lojas virtuais e a avaliação de desempenho de funcionários. Além disso, também estão presentes nos
                           algoritmos que recomendam perfis em redes sociais ou sugerem músicas e filmes em aplicativos digitais.</p>
 
@@ -642,7 +548,8 @@
                 <section id="programacao" class="content-section animate-in delay-1">
                     <h2>Programação <span class="badge-event">Atualizado em 22/08/2025</span></h2>
                     
-                    <div class="table-responsive">
+                    <!-- Tabela para desktop -->
+                    <div class="table-responsive d-none d-md-block">
                         <table class="programacao-table">
                             <thead>
                                 <tr>
@@ -658,28 +565,28 @@
                                     <td colspan="4">21 de outubro de 2025 - Abertura Oficial</td>
                                 </tr>
                                 <tr>
-                                    <td data-label="Data"></td>
-                                    <td class="horario" data-label="Horário">18:30 – 19:00</td>
-                                    <td class="atividade" data-label="Atividade">Mesa de Abertura</td>
-                                    <td class="palestrante" data-label="Palestrante">Convidados: Reitoria, Coordenação do Curso de Estatística, Departamento de Estatística e Patrocinadores</td>
+                                    <td></td>
+                                    <td class="horario">18:30 – 19:00</td>
+                                    <td class="atividade">Mesa de Abertura</td>
+                                    <td class="palestrante">Convidados: Reitoria, Coordenação do Curso de Estatística, Departamento de Estatística e Patrocinadores</td>
                                 </tr>
                                 <tr>
-                                    <td data-label="Data"></td>
-                                    <td class="horario" data-label="Horário">19:00 – 20:15</td>
-                                    <td class="atividade" data-label="Atividade">Palestra 1: "ChatPP: IA e Políticas Públicas"</td>
-                                    <td class="palestrante" data-label="Palestrante">Convidado: Dr. Paulo Jannuzzi (ENCE/IBGE) – A confirmar</td>
+                                    <td></td>
+                                    <td class="horario">19:00 – 20:15</td>
+                                    <td class="atividade">Palestra 1: "ChatPP: IA e Políticas Públicas"</td>
+                                    <td class="palestrante">Convidado: Dr. Paulo Jannuzzi (ENCE/IBGE) – A confirmar</td>
                                 </tr>
                                 <tr>
-                                    <td data-label="Data"></td>
-                                    <td class="horario" data-label="Horário">20:15 – 20:45</td>
-                                    <td class="atividade" data-label="Atividade">Coffee Break</td>
-                                    <td class="palestrante" data-label="Palestrante"></td>
+                                    <td></td>
+                                    <td class="horario">20:15 – 20:45</td>
+                                    <td class="atividade">Coffee Break</td>
+                                    <td class="palestrante"></td>
                                 </tr>
                                 <tr>
-                                    <td data-label="Data"></td>
-                                    <td class="horario" data-label="Horário">20:45 – 21:45</td>
-                                    <td class="atividade" data-label="Atividade">Palestra 2: "Tema a Definir"</td>
-                                    <td class="palestrante" data-label="Palestrante">Hugo Braghetto – Banco do Brasil</td>
+                                    <td></td>
+                                    <td class="horario">20:45 – 21:45</td>
+                                    <td class="atividade">Palestra 2: "Tema a Definir"</td>
+                                    <td class="palestrante">Hugo Braghetto – Banco do Brasil</td>
                                 </tr>
                                 
                                 <!-- Dia 22 -->
@@ -687,28 +594,28 @@
                                     <td colspan="4">22 de outubro de 2025</td>
                                 </tr>
                                 <tr>
-                                    <td data-label="Data"></td>
-                                    <td class="horario" data-label="Horário">18:30 – 19:00</td>
-                                    <td class="atividade" data-label="Atividade">Sessão Pôster</td>
-                                    <td class="palestrante" data-label="Palestrante">Divulgação de trabalhos da comunidade acadêmica</td>
+                                    <td></td>
+                                    <td class="horario">18:30 – 19:00</td>
+                                    <td class="atividade">Sessão Pôster</td>
+                                    <td class="palestrante">Divulgação de trabalhos da comunidade acadêmica</td>
                                 </tr>
                                 <tr>
-                                    <td data-label="Data"></td>
-                                    <td class="horario" data-label="Horário">19:00 – 20:15</td>
-                                    <td class="atividade" data-label="Atividade">Palestra 3: "Plano Nacional de Inteligência Artificial"</td>
-                                    <td class="palestrante" data-label="Palestrante">Convidado: Dr. Hugo Valadares (MCTI) – A confirmar</td>
+                                    <td></td>
+                                    <td class="horario">19:00 – 20:15</td>
+                                    <td class="atividade">Palestra 3: "Plano Nacional de Inteligência Artificial"</td>
+                                    <td class="palestrante">Convidado: Dr. Hugo Valadares (MCTI) – A confirmar</td>
                                 </tr>
                                 <tr>
-                                    <td data-label="Data"></td>
-                                    <td class="horario" data-label="Horário">20:15 – 20:45</td>
-                                    <td class="atividade" data-label="Atividade">Coffee Break</td>
-                                    <td class="palestrante" data-label="Palestrante"></td>
+                                    <td></td>
+                                    <td class="horario">20:15 – 20:45</td>
+                                    <td class="atividade">Coffee Break</td>
+                                    <td class="palestrante"></td>
                                 </tr>
                                 <tr>
-                                    <td data-label="Data"></td>
-                                    <td class="horario" data-label="Horário">20:45 – 21:45</td>
-                                    <td class="atividade" data-label="Atividade">Palestra 4: "Censo 2022: Favelas e Comunidades Urbanas"</td>
-                                    <td class="palestrante" data-label="Palestrante">Convidada: Ma. Larissa Catalá (IBGE)</td>
+                                    <td></td>
+                                    <td class="horario">20:45 – 21:45</td>
+                                    <td class="atividade">Palestra 4: "Censo 2022: Favelas e Comunidades Urbanas"</td>
+                                    <td class="palestrante">Convidada: Ma. Larissa Catalá (IBGE)</td>
                                 </tr>
                                 
                                 <!-- Dia 23 -->
@@ -716,28 +623,28 @@
                                     <td colspan="4">23 de outubro de 2025</td>
                                 </tr>
                                 <tr>
-                                    <td data-label="Data"></td>
-                                    <td class="horario" data-label="Horário">18:30 – 19:00</td>
-                                    <td class="atividade" data-label="Atividade">Sessão Pôster</td>
-                                    <td class="palestrante" data-label="Palestrante">Divulgação de trabalhos da comunidade acadêmica</td>
+                                    <td></td>
+                                    <td class="horario">18:30 – 19:00</td>
+                                    <td class="atividade">Sessão Pôster</td>
+                                    <td class="palestrante">Divulgação de trabalhos da comunidade acadêmica</td>
                                 </tr>
                                 <tr>
-                                    <td data-label="Data"></td>
-                                    <td class="horario" data-label="Horário">19:00 – 20:15</td>
-                                    <td class="atividade" data-label="Atividade">Palestra 5: "O Conselho Regional de Estatística: atuação profissional do Estatístico"</td>
-                                    <td class="palestrante" data-label="Palestrante">Convidado: Estênio Andrade (CONRE-1)</td>
+                                    <td></td>
+                                    <td class="horario">19:00 – 20:15</td>
+                                    <td class="atividade">Palestra 5: "O Conselho Regional de Estatística: atuação profissional do Estatístico"</td>
+                                    <td class="palestrante">Convidado: Estênio Andrade (CONRE-1)</td>
                                 </tr>
                                 <tr>
-                                    <td data-label="Data"></td>
-                                    <td class="horario" data-label="Horário">20:15 – 20:45</td>
-                                    <td class="atividade" data-label="Atividade">Coffee Break</td>
-                                    <td class="palestrante" data-label="Palestrante"></td>
+                                    <td></td>
+                                    <td class="horario">20:15 – 20:45</td>
+                                    <td class="atividade">Coffee Break</td>
+                                    <td class="palestrante"></td>
                                 </tr>
                                 <tr>
-                                    <td data-label="Data"></td>
-                                    <td class="horario" data-label="Horário">20:45 – 21:45</td>
-                                    <td class="atividade" data-label="Atividade">Palestra 6: "Estatura das crianças e raça/cor das mães"</td>
-                                    <td class="palestrante" data-label="Palestrante">Convidada: Dra. Juliana Freitas (CIDACS – FioCruz) – A confirmar</td>
+                                    <td></td>
+                                    <td class="horario">20:45 – 21:45</td>
+                                    <td class="atividade">Palestra 6: "Estatura das crianças e raça/cor das mães"</td>
+                                    <td class="palestrante">Convidada: Dra. Juliana Freitas (CIDACS – FioCruz) – A confirmar</td>
                                 </tr>
                                 
                                 <!-- Dia 24 -->
@@ -745,13 +652,103 @@
                                     <td colspan="4">24 de outubro de 2025</td>
                                 </tr>
                                 <tr>
-                                    <td data-label="Data"></td>
-                                    <td class="horario" data-label="Horário">A definir</td>
-                                    <td class="atividade" data-label="Atividade">Mini-cursos</td>
-                                    <td class="palestrante" data-label="Palestrante">Detalhes em breve</td>
+                                    <td></td>
+                                    <td class="horario">A definir</td>
+                                    <td class="atividade">Mini-cursos</td>
+                                    <td class="palestrante">Detalhes em breve</td>
                                 </tr>
                             </tbody>
                         </table>
+                    </div>
+                    
+                    <!-- Cards para mobile -->
+                    <div class="programacao-cards d-md-none">
+                        <!-- Dia 21 -->
+                        <div class="dia-card">21 de outubro de 2025 - Abertura Oficial</div>
+                        
+                        <div class="atividade-card">
+                            <div class="horario-card">18:30 – 19:00</div>
+                            <div class="atividade">Mesa de Abertura</div>
+                            <div class="palestrante-card">Convidados: Reitoria, Coordenação do Curso de Estatística, Departamento de Estatística e Patrocinadores</div>
+                        </div>
+                        
+                        <div class="atividade-card">
+                            <div class="horario-card">19:00 – 20:15</div>
+                            <div class="atividade">Palestra 1: "ChatPP: IA e Políticas Públicas"</div>
+                            <div class="palestrante-card">Convidado: Dr. Paulo Jannuzzi (ENCE/IBGE) – A confirmar</div>
+                        </div>
+                        
+                        <div class="atividade-card">
+                            <div class="horario-card">20:15 – 20:45</div>
+                            <div class="atividade">Coffee Break</div>
+                        </div>
+                        
+                        <div class="atividade-card">
+                            <div class="horario-card">20:45 – 21:45</div>
+                            <div class="atividade">Palestra 2: "Tema a Definir</div>
+                            <div class="palestrante-card">Hugo Braghetto – Banco do Brasil</div>
+                        </div>
+                        
+                        <!-- Dia 22 -->
+                        <div class="dia-card">22 de outubro de 2025</div>
+                        
+                        <div class="atividade-card">
+                            <div class="horario-card">18:30 – 19:00</div>
+                            <div class="atividade">Sessão Pôster</div>
+                            <div class="palestrante-card">Divulgação de trabalhos da comunidade acadêmica</div>
+                        </div>
+                        
+                        <div class="atividade-card">
+                            <div class="horario-card">19:00 – 20:15</div>
+                            <div class="atividade">Palestra 3: "Plano Nacional de Inteligência Artificial"</div>
+                            <div class="palestrante-card">Convidado: Dr. Hugo Valadares (MCTI) – A confirmar</div>
+                        </div>
+                        
+                        <div class="atividade-card">
+                            <div class="horario-card">20:15 – 20:45</div>
+                            <div class="atividade">Coffee Break</div>
+                        </div>
+                        
+                        <div class="atividade-card">
+                            <div class="horario-card">20:45 – 21:45</div>
+                            <div class="atividade">Palestra 4: "Censo 2022: Favelas e Comunidades Urbanas"</div>
+                            <div class="palestrante-card">Convidada: Ma. Larissa Catalá (IBGE)</div>
+                        </div>
+                        
+                        <!-- Dia 23 -->
+                        <div class="dia-card">23 de outubro de 2025</div>
+                        
+                        <div class="atividade-card">
+                            <div class="horario-card">18:30 – 19:00</div>
+                            <div class="atividade">Sessão Pôster</div>
+                            <div class="palestrante-card">Divulgação de trabalhos da comunidade acadêmica</div>
+                        </div>
+                        
+                        <div class="atividade-card">
+                            <div class="horario-card">19:00 – 20:15</div>
+                            <div class="atividade">Palestra 5: "O Conselho Regional de Estatística: atuação profissional do Estatístico"</div>
+                            <div class="palestrante-card">Convidado: Estênio Andrade (CONRE-1)</div>
+                        </div>
+                        
+                        <div class="atividade-card">
+                            <div class="horario-card">20:15 – 20:45</div>
+                            <div class="atividade">Coffee Break</div>
+                        </div>
+                        
+                        <div class="atividade-card">
+                            <div class="horario-card">20:45 – 21:45</div>
+                            <div class="atividade">Palestra 6: "Estatura das crianças e raça/cor das mães"</div>
+                            <div class="palestrante-card">Convidada: Dra. Juliana Freitas (CIDACS – FioCruz) – A confirmar</div>
+                        </div>
+                        
+                        <!-- Dia 24 -->
+                        <div class="dia-card">24 de outubro de 2025</div>
+                        
+                        <div class="atividade-card">
+                            <div class="horario-card">A definir</div>
+                            <div class="atividade">Mini-cursos</div>
+                            <div class="palestrante-card">Detalhes em breve</div>
+                        </div>
                     </div>
                 </section>
                 
@@ -834,9 +831,9 @@
         </div>
     </footer>
 
-    <!--  Bootstrap -->
+    <!-- Scripts Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    
+
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const observer = new IntersectionObserver((entries) => {
@@ -848,15 +845,6 @@
             }, { threshold: 0.1 });
             
             document.querySelectorAll('section').forEach(section => observer.observe(section));
-            
-            // Adicionar labels para a tabela responsiva
-            document.querySelectorAll('.programacao-table th').forEach((th, index) => {
-                document.querySelectorAll('.programacao-table td').forEach(td => {
-                    if (td.cellIndex === index) {
-                        td.setAttribute('data-label', th.textContent);
-                    }
-                });
-            });
         });
     </script>
 </body>
