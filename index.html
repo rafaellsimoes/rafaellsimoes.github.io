@@ -47,7 +47,7 @@
         header { 
             background: var(--primary-color); 
             color: #ffffff; 
-            padding: 2rem 1rem 3rem; 
+            padding: 1.5rem 0.5rem 2rem; 
             text-align: center; 
             overflow: hidden; 
             position: relative; 
@@ -57,7 +57,7 @@
         footer { 
             background: var(--primary-color); 
             color: #ffffff; 
-            padding: 2rem; 
+            padding: 1.5rem; 
             margin-top: auto; 
             backdrop-filter: blur(5px); 
             border-top: 1px solid rgba(255, 255, 255, 0.1); 
@@ -69,60 +69,60 @@
             font-family: 'Orbitron', monospace;
             color: #ffffff; /* Branco sólido */
             font-weight: 900;
-            font-size: 2.8rem;
+            font-size: 2.2rem;
             text-align: center;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.2rem;
             line-height: 1.2;
-            letter-spacing: 3px;
+            letter-spacing: 2px;
         }
         
         h2 {
             font-family: 'Orbitron', monospace;
             color: #1a4b8c; /* Azul sólido */
             font-weight: 700;
-            font-size: 2.2rem;
-            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+            margin-bottom: 1.2rem;
             position: relative;
             display: inline-block;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
         }
         h2::after {
             content: '';
             position: absolute;
-            bottom: -8px; left: 0;
-            width: 60px; height: 4px;
+            bottom: -6px; left: 0;
+            width: 50px; height: 3px;
             background: #1a4b8c; border-radius: 2px;
         }
         h3 {
             font-family: 'Orbitron', monospace;
             color: #1a4b8c; /* Azul sólido */
             font-weight: 500;
-            font-size: 1.7rem;
-            margin-bottom: 1.5rem;
+            font-size: 1.4rem;
+            margin-bottom: 1.2rem;
             text-align: center;
-            letter-spacing: 1.5px;
+            letter-spacing: 1px;
         }
         h4 {
             font-family: 'Orbitron', monospace;
             color: #1a4b8c; /* Azul sólido */
             font-weight: 400;
-            font-size: 1.4rem;
-            margin-bottom: 1rem;
-            letter-spacing: 1px;
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            letter-spacing: 0.5px;
         }
-        h5 { color: #ffffff; font-weight: 400; font-size: 1rem; text-align: center; margin-bottom: 1rem; }
-        p { margin-bottom: 1.5rem; }
+        h5 { color: #ffffff; font-weight: 400; font-size: 0.9rem; text-align: center; margin-bottom: 0.8rem; }
+        p { margin-bottom: 1.2rem; }
         
         .header-logos {
             display: flex; 
             justify-content: center; 
             align-items: center;
-            gap: 2rem; 
-            margin-bottom: 2rem; 
+            gap: 1rem; 
+            margin-bottom: 1.5rem; 
             flex-wrap: wrap;
         }
         .header-logos img {
-            height: 80px; 
+            height: 60px; 
             width: auto; 
             object-fit: contain;
         }
@@ -130,123 +130,310 @@
         .logo-mono { filter: brightness(0) invert(1); }
         
         .logo-placeholder {
-            width: 180px; height: 80px; background: rgba(255,255,255,0.1);
+            width: 140px; height: 60px; background: rgba(255,255,255,0.1);
             border: 2px dashed rgba(255,255,255,0.3);
             display: flex; align-items: center; justify-content: center;
-            color: rgba(255,255,255,0.5); font-size: 0.8rem; border-radius: 8px;
+            color: rgba(255,255,255,0.5); font-size: 0.7rem; border-radius: 6px;
         }
         
-        .lead { font-size: 1.25rem; font-weight: 300; margin-bottom: 0; opacity: 0.9; }
+        .lead { font-size: 1.1rem; font-weight: 300; margin-bottom: 0; opacity: 0.9; }
         
         /* Container Principal */
-        main.main-container { max-width: 1200px; margin: 0 auto; padding: 2rem; flex: 1; background: transparent; }
+        main.main-container { max-width: 1200px; margin: 0 auto; padding: 1rem; flex: 1; background: transparent; }
         .content-section {
-            padding: 2rem; 
+            padding: 1.5rem; 
             background: rgba(26, 75, 140, 0.05);
             backdrop-filter: blur(10px);
-            border-radius: 16px; 
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+            border-radius: 12px; 
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
             border: 1px solid rgba(26, 75, 140, 0.08); 
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             color: var(--text-color);
         }
-        .content-section:hover { transform: translateY(-5px); box-shadow: 0 12px 40px rgba(0, 0, 0, 0.10); }
+        .content-section:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10); }
 
-        .sidebar { padding-right: 2rem; }
+        .sidebar { padding-right: 0; margin-bottom: 1.5rem; }
         .btn-sidebar {
-            width: 100%; margin-bottom: 1rem; text-align: left; padding: 0.75rem 1.5rem;
-            border-radius: 8px; transition: all 0.3s ease; font-weight: 500; border: none;
+            width: 100%; margin-bottom: 0.8rem; text-align: left; padding: 0.6rem 1rem;
+            border-radius: 6px; transition: all 0.3s ease; font-weight: 500; border: none;
             background: rgba(26, 75, 140, 0.08); color: #000000;
+            font-size: 0.9rem;
         }
-        .btn-sidebar:hover { background: rgba(26, 75, 140, 0.25); transform: translateX(5px); color: #000; }
+        .btn-sidebar:hover { background: rgba(26, 75, 140, 0.25); transform: translateX(3px); color: #000; }
         .btn-sidebar.active { background: #1a4b8c; color: #ffffff; font-weight: 600; }
         
         /* Tabela */
         .modern-table {
-            width: 100%; border-collapse: collapse; margin: 20px 0; font-family: 'Poppins', sans-serif;
+            width: 100%; border-collapse: collapse; margin: 15px 0; font-family: 'Poppins', sans-serif;
             background: rgba(26, 75, 140, 0.05);
-            border-radius: 10px; overflow: hidden; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            border-radius: 8px; overflow: hidden; box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+            font-size: 0.9rem;
         }
         .modern-table th {
-            background-color: rgba(26, 75, 140, 0.15); color: #000; padding: 15px; text-align: left;
+            background-color: rgba(26, 75, 140, 0.15); color: #000; padding: 12px; text-align: left;
             font-weight: 600; border-bottom: 2px solid rgba(26, 75, 140, 0.2);
+            font-size: 0.9rem;
         }
-        .modern-table td { padding: 15px; border-bottom: 1px solid rgba(26, 75, 140, 0.12); vertical-align: middle; color: #000; }
+        .modern-table td { padding: 12px; border-bottom: 1px solid rgba(26, 75, 140, 0.12); vertical-align: middle; color: #000; font-size: 0.9rem; }
         .modern-table tr:last-child td { border-bottom: none; }
         .modern-table tr:hover { background-color: rgba(26, 75, 140, 0.08); }
-        .table-link { color: #0066ff; text-decoration: none; transition: all 0.3s ease; display: inline-flex; align-items: center; gap: 8px; font-weight: 500; }
-        .table-link:hover { color: #1a4b8c; transform: translateX(3px); }
+        .table-link { color: #0066ff; text-decoration: none; transition: all 0.3s ease; display: inline-flex; align-items: center; gap: 6px; font-weight: 500; font-size: 0.9rem; }
+        .table-link:hover { color: #1a4b8c; transform: translateX(2px); }
         .text-center { text-align: center; }
         .table-responsive { overflow-x: auto; -webkit-overflow-scrolling: touch; }
         
         /* Cards de programação */
         .event-card {
             background: rgba(26, 75, 140, 0.05); 
-            border-radius: 12px; 
-            padding: 1.5rem; 
-            margin-bottom: 1.5rem;
-            border-left: 4px solid var(--accent-color); 
+            border-radius: 10px; 
+            padding: 1.2rem; 
+            margin-bottom: 1.2rem;
+            border-left: 3px solid var(--accent-color); 
             transition: all 0.3s ease;
             color: #000;
         }
-        .event-card:hover { background: rgba(26, 75, 140, 0.10); transform: translateY(-3px); }
-        .event-time { font-weight: 600; color: #1a4b8c; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
-        .event-title { font-weight: 600; font-size: 1.2rem; margin-bottom: 0.5rem; }
-        .event-speaker { font-style: italic; opacity: 0.9; margin-bottom: 0.5rem; }
+        .event-card:hover { background: rgba(26, 75, 140, 0.10); transform: translateY(-2px); }
+        .event-time { font-weight: 600; color: #1a4b8c; margin-bottom: 0.4rem; display: flex; align-items: center; gap: 0.4rem; font-size: 0.9rem; }
+        .event-title { font-weight: 600; font-size: 1rem; margin-bottom: 0.4rem; }
+        .event-speaker { font-style: italic; opacity: 0.9; margin-bottom: 0.4rem; font-size: 0.9rem; }
         
         /* Texto e Links */
-        .texto-branco { color: #000000; text-align: justify; text-justify: inter-word; font-weight: 300; }
-        .link-rodape { color: #0066ff; text-decoration: none; font-weight: 500; transition: all 0.3s ease; display: inline-block; margin-top: 1rem; }
-        .link-rodape:hover { color: #1a4b8c; transform: translateX(5px); }
+        .texto-branco { color: #000000; text-align: justify; text-justify: inter-word; font-weight: 300; font-size: 0.95rem; }
+        .link-rodape { color: #0066ff; text-decoration: none; font-weight: 500; transition: all 0.3s ease; display: inline-block; margin-top: 0.8rem; font-size: 0.9rem; }
+        .link-rodape:hover { color: #1a4b8c; transform: translateX(3px); }
         
         /* Rodapé */
-        .footer-content { display: flex; flex-direction: column; align-items: center; gap: 1.5rem; position: relative; }
+        .footer-content { display: flex; flex-direction: column; align-items: center; gap: 1.2rem; position: relative; }
         .footer-logos { 
             display: flex; 
             justify-content: center; 
             align-items: center; 
-            gap: 2rem; 
-            margin-bottom: 1rem; 
+            gap: 1.2rem; 
+            margin-bottom: 0.8rem; 
             flex-wrap: wrap; 
         }
         .footer-logos img { 
-            height: 60px; 
+            height: 50px; 
             width: auto; 
             object-fit: contain; 
             filter: brightness(0) invert(1);
         }
-        .social-links { display: flex; gap: 1.5rem; margin-top: 1rem; }
-        .social-links a { color: #220a9e; font-size: 1.5rem; transition: all 0.3s ease; }
-        .social-links a:hover { color: var(--accent-color); transform: translateY(-3px); }
-        .external-links { display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center; }
-        .external-links a { color: #ffffff; text-decoration: none; transition: all 0.3s ease; display: flex; align-items: center; gap: 0.5rem; }
+        .social-links { display: flex; gap: 1rem; margin-top: 0.8rem; }
+        .social-links a { color: #220a9e; font-size: 1.2rem; transition: all 0.3s ease; }
+        .social-links a:hover { color: var(--accent-color); transform: translateY(-2px); }
+        .external-links { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
+        .external-links a { color: #ffffff; text-decoration: none; transition: all 0.3s ease; display: flex; align-items: center; gap: 0.4rem; font-size: 0.9rem; }
         .external-links a:hover { color: var(--accent-color); }
         
    
         .badge-event {
             background-color: rgba(26, 75, 140, 0.15); color: #1a4b8c; font-weight: 600;
-            padding: 0.35rem 0.75rem; border-radius: 50px; font-size: 0.8rem; margin-left: 0.5rem; vertical-align: middle;
+            padding: 0.25rem 0.6rem; border-radius: 40px; font-size: 0.7rem; margin-left: 0.4rem; vertical-align: middle;
         }
         .highlight-box {
-            background: rgba(26, 75, 140, 0.06); border-radius: 10px; padding: 1.5rem; margin: 1.5rem 0; border-left: 4px solid #1a4b8c; color: #000;
+            background: rgba(26, 75, 140, 0.06); border-radius: 8px; padding: 1.2rem; margin: 1.2rem 0; border-left: 3px solid #1a4b8c; color: #000;
+            font-size: 0.9rem;
         }
         
       
         .confirmation-field {
             background: rgba(26, 75, 140, 0.06); border: 2px dashed rgba(26, 75, 140, 0.25);
-            padding: 1rem; border-radius: 8px; margin-bottom: 1rem; text-align: center; color: #000;
+            padding: 0.8rem; border-radius: 6px; margin-bottom: 0.8rem; text-align: center; color: #000;
+            font-size: 0.9rem;
         }
-        .confirmation-field strong { display: block; margin-bottom: 0.5rem; color: #1a4b8c; }
+        .confirmation-field strong { display: block; margin-bottom: 0.4rem; color: #1a4b8c; }
         
       
         @media (max-width: 768px) {
-            h1 { font-size: 2rem; }
-            h2 { font-size: 1.75rem; }
-            .content-section { padding: 1.5rem; }
-            .header-logos, .footer-logos { flex-direction: column; gap: 1rem; }
-            .header-logos img, .footer-logos img { height: 60px; }
-            .sidebar { padding-right: 0; margin-bottom: 2rem; }
+            h1 { font-size: 1.8rem; letter-spacing: 1px; }
+            h2 { font-size: 1.5rem; }
+            h3 { font-size: 1.3rem; }
+            h4 { font-size: 1.1rem; }
+            .lead { font-size: 1rem; }
+            
+            .content-section { 
+                padding: 1.2rem; 
+                margin-bottom: 1.2rem;
+                border-radius: 10px;
+            }
+            
+            .header-logos, .footer-logos { 
+                flex-direction: column; 
+                gap: 0.8rem; 
+            }
+            .header-logos img, .footer-logos img { 
+                height: 50px; 
+            }
+            
+            .sidebar { 
+                padding-right: 0; 
+                margin-bottom: 1.5rem; 
+            }
+            
+            .btn-sidebar {
+                padding: 0.7rem 1rem;
+                font-size: 0.9rem;
+            }
+            
+            .texto-branco {
+                font-size: 0.9rem;
+            }
+            
+            /* Melhorias específicas para mobile */
+            .main-container {
+                padding: 0.8rem;
+            }
+            
+            .row {
+                margin-left: -0.5rem;
+                margin-right: -0.5rem;
+            }
+            
+            .col-lg-3, .col-lg-9, .col-md-6 {
+                padding-left: 0.5rem;
+                padding-right: 0.5rem;
+            }
+            
+            /* Ajustes para a tabela em mobile */
+            .programacao-table {
+                font-size: 0.8rem;
+            }
+            
+            .programacao-table th,
+            .programacao-table td {
+                padding: 8px 6px;
+            }
+            
+            .horario {
+                width: auto;
+                white-space: normal;
+            }
+            
+            .dia-header td {
+                font-size: 0.9rem;
+                padding: 10px 6px;
+            }
+            
+            /* Ajuste para as logos no header e footer */
+            .logos-container {
+                flex-direction: column;
+                gap: 1.2rem;
+            }
+            
+            .logo-ufmt, .logo-estatistica, .logo-nic {
+                height: 100px;
+            }
+            
+            /* Ajuste para os botões */
+            .btn {
+                padding: 0.5rem 1rem;
+                font-size: 0.9rem;
+            }
+        }
+        
+        /* Ajustes adicionais para telas muito pequenas */
+        @media (max-width: 480px) {
+            h1 { font-size: 1.6rem; }
+            h2 { font-size: 1.3rem; }
+            
+            .content-section {
+                padding: 1rem;
+            }
+            
+            .programacao-table {
+                font-size: 0.75rem;
+            }
+            
+            .programacao-table th,
+            .programacao-table td {
+                padding: 6px 4px;
+            }
+            
+            .logo-ufmt, .logo-estatistica, .logo-nic {
+                height: 80px;
+            }
+            
+            .external-links {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            .social-links {
+                justify-content: center;
+            }
+            
+            .header-logos img {
+                height: 45px;
+            }
+            
+            .footer-logos img {
+                height: 40px;
+            }
+            
+            .badge-event {
+                display: block;
+                margin: 0.5rem 0 0 0;
+                width: fit-content;
+            }
+        }
+        
+        /* Melhorias para a tabela em dispositivos móveis */
+        @media (max-width: 576px) {
+            .programacao-table {
+                display: block;
+                width: 100%;
+            }
+            
+            .programacao-table thead {
+                display: none;
+            }
+            
+            .programacao-table tr {
+                display: block;
+                margin-bottom: 1rem;
+                border-bottom: 2px solid rgba(26, 75, 140, 0.2);
+            }
+            
+            .programacao-table tr.dia-header {
+                display: table-row;
+                border-bottom: none;
+            }
+            
+            .programacao-table tr.dia-header td {
+                display: table-cell;
+                padding: 10px;
+                text-align: center;
+                font-weight: bold;
+            }
+            
+            .programacao-table td {
+                display: block;
+                text-align: right;
+                padding: 8px;
+                position: relative;
+                padding-left: 50%;
+            }
+            
+            .programacao-table td::before {
+                content: attr(data-label);
+                position: absolute;
+                left: 8px;
+                width: 45%;
+                padding-right: 10px;
+                white-space: nowrap;
+                text-align: left;
+                font-weight: bold;
+            }
+            
+            /* Esconder o pseudo-elemento para a linha de cabeçalho do dia */
+            .programacao-table tr.dia-header td::before {
+                display: none;
+            }
+            
+            .horario {
+                white-space: normal;
+            }
         }
         
       
@@ -263,7 +450,7 @@
             align-items: center;
             width: 100%;
             max-width: 1000px;
-            margin: 0 auto 2rem;
+            margin: 0 auto 1.5rem;
         }
         
         .logo-item {
@@ -275,27 +462,27 @@
         }
         
         .logo-ufmt {
-            height: 170px;
+            height: 140px;
             filter: brightness(0) invert(1);
         }
         
         .logo-estatistica {
-            height: 170px;
+            height: 140px;
             filter: brightness(0) invert(1);
         }
         
         .logo-nic {
-            height: 220px;
+            height: 180px;
         }
         
         @media (max-width: 992px) {
             .logos-container {
                 flex-direction: column;
-                gap: 2rem;
+                gap: 1.5rem;
             }
             
             .logo-ufmt, .logo-estatistica, .logo-nic {
-                height: 140px;
+                height: 120px;
             }
         }
         
@@ -303,25 +490,25 @@
         .programacao-table {
             width: 100%;
             border-collapse: collapse;
-            margin: 20px 0;
+            margin: 15px 0;
             font-family: 'Poppins', sans-serif;
             background: rgba(26, 75, 140, 0.05);
-            border-radius: 10px;
+            border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
         }
         
         .programacao-table th {
             background-color: rgba(26, 75, 140, 0.15);
             color: #000;
-            padding: 15px;
+            padding: 12px;
             text-align: left;
             font-weight: 600;
             border-bottom: 2px solid rgba(26, 75, 140, 0.2);
         }
         
         .programacao-table td {
-            padding: 15px;
+            padding: 12px;
             border-bottom: 1px solid rgba(26, 75, 140, 0.12);
             vertical-align: top;
             color: #000;
@@ -338,14 +525,14 @@
         .dia-header {
             background-color: rgba(26, 75, 140, 0.2) !important;
             font-weight: 700;
-            font-size: 1.1rem;
+            font-size: 1rem;
         }
         
         .horario {
             font-weight: 600;
             color: #1a4b8c;
             white-space: nowrap;
-            width: 120px;
+            width: 100px;
         }
         
         .atividade {
@@ -356,7 +543,12 @@
             font-style: italic;
             opacity: 0.9;
             margin-top: 5px;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
+        }
+        
+        /* Adicionando labels para a tabela responsiva */
+        .programacao-table td[data-label] {
+            text-align: right;
         }
     </style>
 </head>
@@ -466,28 +658,28 @@
                                     <td colspan="4">21 de outubro de 2025 - Abertura Oficial</td>
                                 </tr>
                                 <tr>
-                                    <td></td>
-                                    <td class="horario">18:30 – 19:00</td>
-                                    <td class="atividade">Mesa de Abertura</td>
-                                    <td class="palestrante">Convidados: Reitoria, Coordenação do Curso de Estatística, Departamento de Estatística e Patrocinadores</td>
+                                    <td data-label="Data"></td>
+                                    <td class="horario" data-label="Horário">18:30 – 19:00</td>
+                                    <td class="atividade" data-label="Atividade">Mesa de Abertura</td>
+                                    <td class="palestrante" data-label="Palestrante">Convidados: Reitoria, Coordenação do Curso de Estatística, Departamento de Estatística e Patrocinadores</td>
                                 </tr>
                                 <tr>
-                                    <td></td>
-                                    <td class="horario">19:00 – 20:15</td>
-                                    <td class="atividade">Palestra 1: "ChatPP: IA e Políticas Públicas"</td>
-                                    <td class="palestrante">Convidado: Dr. Paulo Jannuzzi (ENCE/IBGE) – A confirmar</td>
+                                    <td data-label="Data"></td>
+                                    <td class="horario" data-label="Horário">19:00 – 20:15</td>
+                                    <td class="atividade" data-label="Atividade">Palestra 1: "ChatPP: IA e Políticas Públicas"</td>
+                                    <td class="palestrante" data-label="Palestrante">Convidado: Dr. Paulo Jannuzzi (ENCE/IBGE) – A confirmar</td>
                                 </tr>
                                 <tr>
-                                    <td></td>
-                                    <td class="horario">20:15 – 20:45</td>
-                                    <td class="atividade">Coffee Break</td>
-                                    <td class="palestrante"></td>
+                                    <td data-label="Data"></td>
+                                    <td class="horario" data-label="Horário">20:15 – 20:45</td>
+                                    <td class="atividade" data-label="Atividade">Coffee Break</td>
+                                    <td class="palestrante" data-label="Palestrante"></td>
                                 </tr>
                                 <tr>
-                                    <td></td>
-                                    <td class="horario">20:45 – 21:45</td>
-                                    <td class="atividade">Palestra 2: "Tema a Definir"</td>
-                                    <td class="palestrante">Hugo Braghetto – Banco do Brasil</td>
+                                    <td data-label="Data"></td>
+                                    <td class="horario" data-label="Horário">20:45 – 21:45</td>
+                                    <td class="atividade" data-label="Atividade">Palestra 2: "Tema a Definir"</td>
+                                    <td class="palestrante" data-label="Palestrante">Hugo Braghetto – Banco do Brasil</td>
                                 </tr>
                                 
                                 <!-- Dia 22 -->
@@ -495,28 +687,28 @@
                                     <td colspan="4">22 de outubro de 2025</td>
                                 </tr>
                                 <tr>
-                                    <td></td>
-                                    <td class="horario">18:30 – 19:00</td>
-                                    <td class="atividade">Sessão Pôster</td>
-                                    <td class="palestrante">Divulgação de trabalhos da comunidade acadêmica</td>
+                                    <td data-label="Data"></td>
+                                    <td class="horario" data-label="Horário">18:30 – 19:00</td>
+                                    <td class="atividade" data-label="Atividade">Sessão Pôster</td>
+                                    <td class="palestrante" data-label="Palestrante">Divulgação de trabalhos da comunidade acadêmica</td>
                                 </tr>
                                 <tr>
-                                    <td></td>
-                                    <td class="horario">19:00 – 20:15</td>
-                                    <td class="atividade">Palestra 3: "Plano Nacional de Inteligência Artificial"</td>
-                                    <td class="palestrante">Convidado: Dr. Hugo Valadares (MCTI) – A confirmar</td>
+                                    <td data-label="Data"></td>
+                                    <td class="horario" data-label="Horário">19:00 – 20:15</td>
+                                    <td class="atividade" data-label="Atividade">Palestra 3: "Plano Nacional de Inteligência Artificial"</td>
+                                    <td class="palestrante" data-label="Palestrante">Convidado: Dr. Hugo Valadares (MCTI) – A confirmar</td>
                                 </tr>
                                 <tr>
-                                    <td></td>
-                                    <td class="horario">20:15 – 20:45</td>
-                                    <td class="atividade">Coffee Break</td>
-                                    <td class="palestrante"></td>
+                                    <td data-label="Data"></td>
+                                    <td class="horario" data-label="Horário">20:15 – 20:45</td>
+                                    <td class="atividade" data-label="Atividade">Coffee Break</td>
+                                    <td class="palestrante" data-label="Palestrante"></td>
                                 </tr>
                                 <tr>
-                                    <td></td>
-                                    <td class="horario">20:45 – 21:45</td>
-                                    <td class="atividade">Palestra 4: "Censo 2022: Favelas e Comunidades Urbanas"</td>
-                                    <td class="palestrante">Convidada: Ma. Larissa Catalá (IBGE)</td>
+                                    <td data-label="Data"></td>
+                                    <td class="horario" data-label="Horário">20:45 – 21:45</td>
+                                    <td class="atividade" data-label="Atividade">Palestra 4: "Censo 2022: Favelas e Comunidades Urbanas"</td>
+                                    <td class="palestrante" data-label="Palestrante">Convidada: Ma. Larissa Catalá (IBGE)</td>
                                 </tr>
                                 
                                 <!-- Dia 23 -->
@@ -524,28 +716,28 @@
                                     <td colspan="4">23 de outubro de 2025</td>
                                 </tr>
                                 <tr>
-                                    <td></td>
-                                    <td class="horario">18:30 – 19:00</td>
-                                    <td class="atividade">Sessão Pôster</td>
-                                    <td class="palestrante">Divulgação de trabalhos da comunidade acadêmica</td>
+                                    <td data-label="Data"></td>
+                                    <td class="horario" data-label="Horário">18:30 – 19:00</td>
+                                    <td class="atividade" data-label="Atividade">Sessão Pôster</td>
+                                    <td class="palestrante" data-label="Palestrante">Divulgação de trabalhos da comunidade acadêmica</td>
                                 </tr>
                                 <tr>
-                                    <td></td>
-                                    <td class="horario">19:00 – 20:15</td>
-                                    <td class="atividade">Palestra 5: "O Conselho Regional de Estatística: atuação profissional do Estatístico"</td>
-                                    <td class="palestrante">Convidado: Estênio Andrade (CONRE-1)</td>
+                                    <td data-label="Data"></td>
+                                    <td class="horario" data-label="Horário">19:00 – 20:15</td>
+                                    <td class="atividade" data-label="Atividade">Palestra 5: "O Conselho Regional de Estatística: atuação profissional do Estatístico"</td>
+                                    <td class="palestrante" data-label="Palestrante">Convidado: Estênio Andrade (CONRE-1)</td>
                                 </tr>
                                 <tr>
-                                    <td></td>
-                                    <td class="horario">20:15 – 20:45</td>
-                                    <td class="atividade">Coffee Break</td>
-                                    <td class="palestrante"></td>
+                                    <td data-label="Data"></td>
+                                    <td class="horario" data-label="Horário">20:15 – 20:45</td>
+                                    <td class="atividade" data-label="Atividade">Coffee Break</td>
+                                    <td class="palestrante" data-label="Palestrante"></td>
                                 </tr>
                                 <tr>
-                                    <td></td>
-                                    <td class="horario">20:45 – 21:45</td>
-                                    <td class="atividade">Palestra 6: "Estatura das crianças e raça/cor das mães"</td>
-                                    <td class="palestrante">Convidada: Dra. Juliana Freitas (CIDACS – FioCruz) – A confirmar</td>
+                                    <td data-label="Data"></td>
+                                    <td class="horario" data-label="Horário">20:45 – 21:45</td>
+                                    <td class="atividade" data-label="Atividade">Palestra 6: "Estatura das crianças e raça/cor das mães"</td>
+                                    <td class="palestrante" data-label="Palestrante">Convidada: Dra. Juliana Freitas (CIDACS – FioCruz) – A confirmar</td>
                                 </tr>
                                 
                                 <!-- Dia 24 -->
@@ -553,10 +745,10 @@
                                     <td colspan="4">24 de outubro de 2025</td>
                                 </tr>
                                 <tr>
-                                    <td></td>
-                                    <td class="horario">A definir</td>
-                                    <td class="atividade">Mini-cursos</td>
-                                    <td class="palestrante">Detalhes em breve</td>
+                                    <td data-label="Data"></td>
+                                    <td class="horario" data-label="Horário">A definir</td>
+                                    <td class="atividade" data-label="Atividade">Mini-cursos</td>
+                                    <td class="palestrante" data-label="Palestrante">Detalhes em breve</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -642,10 +834,9 @@
         </div>
     </footer>
 
-    <!-- Scripts Bootstrap -->
+    <!--  Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     
-    <!-- Script para animação ao rolar a página -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const observer = new IntersectionObserver((entries) => {
@@ -657,6 +848,15 @@
             }, { threshold: 0.1 });
             
             document.querySelectorAll('section').forEach(section => observer.observe(section));
+            
+            // Adicionar labels para a tabela responsiva
+            document.querySelectorAll('.programacao-table th').forEach((th, index) => {
+                document.querySelectorAll('.programacao-table td').forEach(td => {
+                    if (td.cellIndex === index) {
+                        td.setAttribute('data-label', th.textContent);
+                    }
+                });
+            });
         });
     </script>
 </body>
