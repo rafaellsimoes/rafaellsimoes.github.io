@@ -18,9 +18,7 @@
     
     <title>Semana da Estatística - ICET/UFMT</title>
     
-    <!-- Estilos CSS personalizados -->
     <style>
-        /* Estilo Geral da Página */
         :root {
             --primary-color: #1a4b8c; 
             --secondary-color: #2e7d32;
@@ -31,19 +29,17 @@
         
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
-        /* Body branco, texto preto */
         body {
             font-family: 'Poppins', sans-serif;
             line-height: 1.6;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
-            background: #ffffff;   /* branco */
+            background: #ffffff;
             color: var(--text-color);
             position: relative;
         }
 
-        /* Header azul, texto branco */
         header { 
             background: var(--primary-color); 
             color: #ffffff; 
@@ -53,7 +49,6 @@
             position: relative; 
         }
         
-        /* Footer azul, texto branco */
         footer { 
             background: var(--primary-color); 
             color: #ffffff; 
@@ -64,10 +59,9 @@
             position: relative;
         }
         
-    
         h1 {
             font-family: 'Orbitron', monospace;
-            color: #ffffff; /* Branco sólido */
+            color: #ffffff;
             font-weight: 900;
             font-size: 2.2rem;
             text-align: center;
@@ -78,7 +72,7 @@
         
         h2 {
             font-family: 'Orbitron', monospace;
-            color: #1a4b8c; /* Azul sólido */
+            color: #1a4b8c;
             font-weight: 700;
             font-size: 1.8rem;
             margin-bottom: 1.2rem;
@@ -95,7 +89,7 @@
         }
         h3 {
             font-family: 'Orbitron', monospace;
-            color: #1a4b8c; /* Azul sólido */
+            color: #1a4b8c;
             font-weight: 500;
             font-size: 1.4rem;
             margin-bottom: 1.2rem;
@@ -104,7 +98,7 @@
         }
         h4 {
             font-family: 'Orbitron', monospace;
-            color: #1a4b8c; /* Azul sólido */
+            color: #1a4b8c;
             font-weight: 400;
             font-size: 1.2rem;
             margin-bottom: 0.8rem;
@@ -138,7 +132,6 @@
         
         .lead { font-size: 1.1rem; font-weight: 300; margin-bottom: 0; opacity: 0.9; }
         
-        /* Container Principal */
         main.main-container { max-width: 1200px; margin: 0 auto; padding: 1rem; flex: 1; background: transparent; }
         .content-section {
             padding: 1.5rem; 
@@ -163,7 +156,6 @@
         .btn-sidebar:hover { background: rgba(26, 75, 140, 0.25); transform: translateX(3px); color: #000; }
         .btn-sidebar.active { background: #1a4b8c; color: #ffffff; font-weight: 600; }
         
-        /* Tabela */
         .modern-table {
             width: 100%; border-collapse: collapse; margin: 15px 0; font-family: 'Poppins', sans-serif;
             background: rgba(26, 75, 140, 0.05);
@@ -183,7 +175,6 @@
         .text-center { text-align: center; }
         .table-responsive { overflow-x: auto; -webkit-overflow-scrolling: touch; }
         
-        /* Tabela de Programação Melhorada */
         .programacao-table {
             width: 100%;
             border-collapse: collapse;
@@ -350,7 +341,6 @@
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
         }
         
-        /* Cards de programação */
         .event-card {
             background: rgba(26, 75, 140, 0.05); 
             border-radius: 10px; 
@@ -365,12 +355,10 @@
         .event-title { font-weight: 600; font-size: 1rem; margin-bottom: 0.4rem; }
         .event-speaker { font-style: italic; opacity: 0.9; margin-bottom: 0.4rem; font-size: 0.9rem; }
         
-        /* Texto e Links */
         .texto-branco { color: #000000; text-align: justify; text-justify: inter-word; font-weight: 300; font-size: 0.95rem; }
         .link-rodape { color: #0066ff; text-decoration: none; font-weight: 500; transition: all 0.3s ease; display: inline-block; margin-top: 0.8rem; font-size: 0.9rem; }
         .link-rodape:hover { color: #1a4b8c; transform: translateX(3px); }
         
-        /* Rodapé */
         .footer-content { display: flex; flex-direction: column; align-items: center; gap: 1.2rem; position: relative; }
         .footer-logos { 
             display: flex; 
@@ -393,7 +381,6 @@
         .external-links a { color: #ffffff; text-decoration: none; transition: all 0.3s ease; display: flex; align-items: center; gap: 0.4rem; font-size: 0.9rem; }
         .external-links a:hover { color: var(--accent-color); }
         
-   
         .badge-event {
             background-color: rgba(26, 75, 140, 0.15); color: #1a4b8c; font-weight: 600;
             padding: 0.25rem 0.6rem; border-radius: 40px; font-size: 0.7rem; margin-left: 0.4rem; vertical-align: middle;
@@ -403,7 +390,6 @@
             font-size: 0.9rem;
         }
         
-      
         .confirmation-field {
             background: rgba(26, 75, 140, 0.06); border: 2px dashed rgba(26, 75, 140, 0.25);
             padding: 0.8rem; border-radius: 6px; margin-bottom: 0.8rem; text-align: center; color: #000;
@@ -411,7 +397,6 @@
         }
         .confirmation-field strong { display: block; margin-bottom: 0.4rem; color: #1a4b8c; }
         
-        /* Estilos para a programação em cards (mobile) */
         .programacao-cards {
             display: none;
         }
@@ -487,7 +472,6 @@
             display: inline-block;
         }
         
-        /* Legenda da programação */
         .legenda-programacao {
             background: rgba(26, 75, 140, 0.03);
             border-radius: 10px;
@@ -518,7 +502,6 @@
             padding-top: 1rem;
         }
         
-        /* Estilos para a seção de Contato e Organização */
         .contact-info-card {
             background: #ffffff;
             border-radius: 15px;
@@ -641,14 +624,6 @@
             background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
         }
         
-        .social-link.linkedin {
-            background: #0077b5;
-        }
-        
-        .social-link.whatsapp {
-            background: #25d366;
-        }
-        
         .social-link i {
             font-size: 1.5rem;
             margin-bottom: 0.5rem;
@@ -659,154 +634,81 @@
             font-weight: 500;
         }
         
-        .quick-contact-card {
-            background: linear-gradient(135deg, #1a4b8c, #2e7d32);
-            color: #ffffff;
-            border-radius: 15px;
-            padding: 1.5rem;
-            text-align: center;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-        
-        .quick-contact-card h5 {
-            color: #ffffff;
-            margin-bottom: 1rem;
-        }
-        
-        .quick-contact-card p {
-            margin-bottom: 1rem;
-            opacity: 0.9;
-        }
-        
-        .help-list {
+        .committee-list {
             list-style: none;
             padding: 0;
-            margin-bottom: 1.5rem;
-            text-align: left;
         }
         
-        .help-list li {
+        .committee-list li {
+            padding: 0.8rem 1rem;
             margin-bottom: 0.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        
-        .help-list i {
-            color: #8bc34a;
-        }
-        
-        .committee-card {
-            background: #ffffff;
-            border-radius: 15px;
-            padding: 2rem;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-            border: 1px solid rgba(26, 75, 140, 0.1);
-        }
-        
-        .committee-header {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-        
-        .committee-header h4 {
-            color: #1a4b8c;
-            margin-bottom: 0.5rem;
-        }
-        
-        .committee-description {
-            color: #666666;
-            font-size: 0.95rem;
-            margin-bottom: 0;
-        }
-        
-        .member-category {
-            margin-bottom: 2rem;
-        }
-        
-        .member-category h5 {
-            color: #2e7d32;
-            margin-bottom: 1rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid rgba(46, 125, 50, 0.2);
-        }
-        
-        .members-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1rem;
-        }
-        
-        .member-item {
-            display: flex;
-            align-items: center;
-            padding: 1rem;
-            background: rgba(26, 75, 140, 0.03);
-            border-radius: 10px;
+            background: rgba(26, 75, 140, 0.05);
+            border-radius: 8px;
             transition: all 0.3s ease;
-            border-left: 3px solid transparent;
         }
         
-        .member-item:hover {
-            background: rgba(26, 75, 140, 0.08);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        .committee-list li:hover {
+            background: rgba(26, 75, 140, 0.1);
+            transform: translateX(5px);
         }
         
-        .member-item.coordinator {
+        .committee-list .coordinator {
             background: rgba(46, 125, 50, 0.08);
-            border-left-color: #2e7d32;
-        }
-        
-        .member-item.developer {
-            background: rgba(156, 39, 176, 0.08);
-            border-left-color: #9c27b0;
-        }
-        
-        .member-avatar {
-            background: #1a4b8c;
-            color: #ffffff;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 1rem;
-            flex-shrink: 0;
-        }
-        
-        .member-item.coordinator .member-avatar {
-            background: #2e7d32;
-        }
-        
-        .member-item.developer .member-avatar {
-            background: #9c27b0;
-        }
-        
-        .member-info h6 {
-            color: #2c3e50;
-            margin-bottom: 0.3rem;
             font-weight: 600;
-            font-size: 0.95rem;
+            border-left: 3px solid #2e7d32;
         }
         
-        .member-role {
-            color: #1a4b8c;
-            font-weight: 500;
-            font-size: 0.85rem;
-            display: block;
-            margin-bottom: 0.2rem;
+        .committee-list .developer {
+            background: rgba(156, 39, 176, 0.08);
+            border-left: 3px solid #9c27b0;
         }
         
-        .member-department,
-        .member-specialty {
-            color: #666666;
-            font-size: 0.8rem;
-            font-style: italic;
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        .animate-in { animation: fadeIn 0.6s ease-out forwards; }
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
+        
+        .logos-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto 1.5rem;
+        }
+        
+        .logo-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            flex: 1;
+        }
+        
+        .logo-ufmt {
+            height: 140px;
+            filter: brightness(0) invert(1);
+        }
+        
+        .logo-estatistica {
+            height: 140px;
+            filter: brightness(0) invert(1);
+        }
+        
+        .logo-nic {
+            height: 180px;
+        }
+        
+        @media (max-width: 992px) {
+            .logos-container {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+            
+            .logo-ufmt, .logo-estatistica, .logo-nic {
+                height: 120px;
+            }
         }
         
         @media (max-width: 768px) {
@@ -844,7 +746,6 @@
                 font-size: 0.9rem;
             }
             
-            /* Melhorias específicas para mobile */
             .main-container {
                 padding: 0.8rem;
             }
@@ -859,7 +760,6 @@
                 padding-right: 0.5rem;
             }
             
-            /* Ajustes para a tabela em mobile - ESCONDER TABELA E MOSTRAR CARDS */
             .programacao-table {
                 display: none;
             }
@@ -868,7 +768,6 @@
                 display: block;
             }
             
-            /* Ajuste para as logos no header e footer */
             .logos-container {
                 flex-direction: column;
                 gap: 1.2rem;
@@ -878,14 +777,12 @@
                 height: 100px;
             }
             
-            /* Ajuste para os botões */
             .btn {
                 padding: 0.5rem 1rem;
                 font-size: 0.9rem;
             }
         }
         
-        /* Ajustes adicionais para telas muito pequenas */
         @media (max-width: 480px) {
             h1 { font-size: 1.6rem; }
             h2 { font-size: 1.3rem; }
@@ -934,42 +831,8 @@
                 align-items: flex-start;
                 gap: 0.4rem;
             }
-            
-            /* Ajustes responsivos para contato e organização */
-            .contact-info-card,
-            .committee-card {
-                padding: 1.5rem;
-            }
-            
-            .members-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .contact-item {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .contact-icon {
-                margin-right: 0;
-                margin-bottom: 1rem;
-            }
-            
-            .social-links {
-                flex-direction: column;
-                gap: 0.5rem;
-            }
-            
-            .social-link {
-                min-width: auto;
-                width: 100%;
-                flex-direction: row;
-                justify-content: center;
-                gap: 0.5rem;
-            }
         }
         
-        /* Ajustes para desktop - garantir que a tabela seja visível */
         @media (min-width: 769px) {
             .programacao-table {
                 display: table;
@@ -979,63 +842,11 @@
                 display: none;
             }
         }
-        
-      
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-        .animate-in { animation: fadeIn 0.6s ease-out forwards; }
-        .delay-1 { animation-delay: 0.2s; }
-        .delay-2 { animation-delay: 0.4s; }
-        .delay-3 { animation-delay: 0.6s; }
-        
-       
-        .logos-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-            max-width: 1000px;
-            margin: 0 auto 1.5rem;
-        }
-        
-        .logo-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-end;
-            flex: 1;
-        }
-        
-        .logo-ufmt {
-            height: 140px;
-            filter: brightness(0) invert(1);
-        }
-        
-        .logo-estatistica {
-            height: 140px;
-            filter: brightness(0) invert(1);
-        }
-        
-        .logo-nic {
-            height: 180px;
-        }
-        
-        @media (max-width: 992px) {
-            .logos-container {
-                flex-direction: column;
-                gap: 1.5rem;
-            }
-            
-            .logo-ufmt, .logo-estatistica, .logo-nic {
-                height: 120px;
-            }
-        }
     </style>
 </head>
 
 <body>
-    <!-- Cabeçalho da página -->
     <header>
-        <!-- Logos perfeitamente alinhadas -->
         <div class="logos-container">
             <div class="logo-item">
                 <img src="ufmt_logo.png" alt="UFMT" class="logo-ufmt">
@@ -1063,10 +874,8 @@
         </div>
     </header>
 
-    <!-- Conteúdo principal -->
     <main class="main-container">
         <div class="row">
-            <!-- Sidebar com botões -->
             <div class="col-lg-3 sidebar">
                 <div class="content-section animate-in delay-1">
                     <h3>Menu</h3>
@@ -1084,7 +893,6 @@
             </div>
             
             <div class="col-lg-9">
-                <!-- Sobre o Evento -->
                 <section id="sobre" class="content-section animate-in">
                     <h2>X Semana da Estatística da Universidade Federal de Mato Grosso</h2>
                     <p class="texto-branco"> 
@@ -1109,7 +917,7 @@
                        Nesse contexto, a SEMEST constitui, para muitos estudantes da UFMT, a primeira experiência em um evento acadêmico da área. 
                        Mais do que um espaço de aprendizado, ela promove o contato direto com profissionais e pesquisadores atuantes, ampliando a compreensão
                         sobre as múltiplas aplicações da estatística e da ciência de dados no campo acadêmico ou do mercado de trabalho.
-                         Assim, o evento contribui não apenas para a formação acadêmica, mas também para a preparação dos futuros estatísticos diante
+                         Assim, o evento contribui não apenas para a formação acadêmica, mas também para la preparação dos futuros estatísticos diante
                           dos desafios e oportunidades do mercado de trabalho e da pesquisa.</p>
                     <p class="texto-branco">
                         Por fim, a SEMEST é também um espaço para a formação crítica dos estudantes, momento em que eles podem interagir com os 
@@ -1117,11 +925,9 @@
                     </p>
                 </section>
                 
-                <!-- Programação em formato de tabela -->
                 <section id="programacao" class="content-section animate-in delay-1">
                     <h2>Programação <span class="badge-event">Atualizado em 22/08/2025</span></h2>
                     
-                    <!-- Legenda da programação -->
                     <div class="legenda-programacao mb-4">
                         <h5><i class="fas fa-info-circle me-2"></i>Legenda da Programação</h5>
                         <div class="row">
@@ -1158,7 +964,6 @@
                         </div>
                     </div>
                     
-                    <!-- Tabela para desktop -->
                     <div class="table-responsive d-none d-md-block">
                         <table class="programacao-table modern-table">
                             <thead>
@@ -1170,7 +975,6 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <!-- Dia 21 -->
                                 <tr class="dia-header">
                                     <td colspan="4"><i class="fas fa-star"></i> 21 de outubro de 2025 - Abertura Oficial</td>
                                 </tr>
@@ -1215,7 +1019,6 @@
                                     </td>
                                 </tr>
                                 
-                                <!-- Dia 22 -->
                                 <tr class="dia-header">
                                     <td colspan="4"><i class="fas fa-calendar-alt"></i> 22 de outubro de 2025</td>
                                 </tr>
@@ -1260,7 +1063,6 @@
                                     </td>
                                 </tr>
                                 
-                                <!-- Dia 23 -->
                                 <tr class="dia-header">
                                     <td colspan="4"><i class="fas fa-calendar-alt"></i> 23 de outubro de 2025</td>
                                 </tr>
@@ -1305,7 +1107,6 @@
                                     </td>
                                 </tr>
                                 
-                                <!-- Dia 24 -->
                                 <tr class="dia-header">
                                     <td colspan="4"><i class="fas fa-graduation-cap"></i> 24 de outubro de 2025</td>
                                 </tr>
@@ -1322,9 +1123,7 @@
                         </table>
                     </div>
                     
-                    <!-- Cards para mobile -->
                     <div class="programacao-cards d-md-none">
-                        <!-- Dia 21 -->
                         <div class="dia-card"><i class="fas fa-star"></i> 21 de outubro de 2025 - Abertura Oficial</div>
                         
                         <div class="atividade-card">
@@ -1363,7 +1162,6 @@
                             <div class="palestrante-card"><i class="fas fa-user-tie"></i> <span class="status-confirmado">Hugo Braghetto – Banco do Brasil</span></div>
                         </div>
                         
-                        <!-- Dia 22 -->
                         <div class="dia-card"><i class="fas fa-calendar-alt"></i> 22 de outubro de 2025</div>
                         
                         <div class="atividade-card">
@@ -1402,7 +1200,6 @@
                             <div class="palestrante-card"><i class="fas fa-user-tie"></i> <span class="status-confirmado">Convidada: Ma. Larissa Catalá (IBGE)</span></div>
                         </div>
                         
-                        <!-- Dia 23 -->
                         <div class="dia-card"><i class="fas fa-calendar-alt"></i> 23 de outubro de 2025</div>
                         
                         <div class="atividade-card">
@@ -1441,7 +1238,6 @@
                             <div class="palestrante-card"><i class="fas fa-user-tie"></i> <span class="status-pendente">Convidada: Dra. Juliana Freitas (CIDACS – FioCruz) – A confirmar</span></div>
                         </div>
                         
-                        <!-- Dia 24 -->
                         <div class="dia-card"><i class="fas fa-graduation-cap"></i> 24 de outubro de 2025</div>
                         
                         <div class="atividade-card">
@@ -1455,56 +1251,75 @@
                     </div>
                 </section>
                 
-                <!-- Inscrições -->
                 <section id="inscricao" class="content-section animate-in delay-1">
                     <h2>Inscrições</h2>
                     <div class="row">
-                        
-                            <div class="event-card">
-                                <h4><i class="fas fa-user-graduate me-2"></i>Sobre as Inscrições</h4>
-
-                                <p class="texto-branco">Inscrições gratuitas para estudantes de graduação, pós-graduação, servidores públicos, profissionais e demais interessados.
-                                     Certificado de participação com carga horária.</p>
-                                <a href="#" class="btn btn-success w-100 mt-2">Inscreva-se na X Semana de Estatística da UFMT (em breve) </a>
-                            </div>
-                        
-                        
+                        <div class="event-card">
+                            <h4><i class="fas fa-user-graduate me-2"></i>Sobre as Inscrições</h4>
+                            <p class="texto-branco">Inscrições gratuitas para estudantes de graduação, pós-graduação, servidores públicos, profissionais e demais interessados.
+                                 Certificado de participação com carga horária.</p>
+                            <a href="#" class="btn btn-success w-100 mt-2">Inscreva-se na X Semana de Estatística da UFMT (em breve) </a>
+                        </div>
                     </div>
                     
                     <div class="highlight-box mt-4">
                         <h4><i class="fas fa-certificate me-2"></i>Certificados</h4>
-                        <p class="texto-branco">Certificado Emitidos pela Pró-Reitoria de Cultura, Extensão e Vivência da UFMT</p>
+                        <p class="texto-branco">Certificado Emitidos pela Pró-Reitoria de Culture, Extensão e Vivência da UFMT</p>
                     </div>
                 </section>
                 
-                <!-- Contato -->
                 <section id="contato" class="content-section animate-in delay-1">
                     <h2>Contato e Organização</h2>
                     <div class="row">
                         <div class="col-md-6">
-                            <div class="event-card h-100">
-                                <h4><i class="fas fa-envelope me-2"></i>Contato</h4>
-                                <p class="texto-branco">Para dúvidas sobre o evento:</p>
-                                <p><i class="fas fa-envelope me-2"></i> ulisses.ferreira@ufmt.br</p>
-                                <div class="social-links mt-3 justify-content-start">
-                                    <a href="https://www.instagram.com/estatistica.ufmt/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <div class="contact-info-card">
+                                <div class="contact-header">
+                                    <h4><i class="fas fa-envelope me-2"></i>Contato</h4>
+                                    <p class="contact-description">Entre em contato conosco para mais informações</p>
+                                </div>
+                                
+                                <div class="contact-details">
+                                    <div class="contact-item">
+                                        <div class="contact-icon">
+                                            <i class="fas fa-envelope"></i>
+                                        </div>
+                                        <div class="contact-content">
+                                            <h6>Email</h6>
+                                            <p><a href="mailto:ulisses.ferreira@ufmt.br" class="contact-link">ulisses.ferreira@ufmt.br</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="social-media-section">
+                                    <h6>Siga-nos</h6>
+                                    <div class="social-links">
+                                        <a href="https://www.instagram.com/estatistica.ufmt/" target="_blank" class="social-link instagram">
+                                            <i class="fab fa-instagram"></i>
+                                            <span>Instagram</span>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                        
                         <div class="col-md-6">
-                            <div class="event-card h-100">
-                                <h4><i class="fas fa-users me-2"></i>Comissão Organizadora</h4>
-                                <ul class="texto-branco">
-                                    <li>Professor Dr Ulisses Carlos Silva Ferreira (Coordenador)</li>
-                                    <li>Debora Dias do Carmo </li>
+                            <div class="contact-info-card">
+                                <div class="contact-header">
+                                    <h4><i class="fas fa-users me-2"></i>Comissão Organizadora</h4>
+                                    <p class="contact-description">Nossa equipe de organização</p>
+                                </div>
+                                
+                                <ul class="committee-list">
+                                    <li class="coordinator">Professor Dr. Ulisses Carlos Silva Ferreira (Coordenador)</li>
+                                    <li>Debora Dias do Carmo</li>
                                     <li>Eduardo Henrique Messias Santos</li>
-                                    <li> Gustavo Caldeira de Carvalho</li>
+                                    <li>Gustavo Caldeira de Carvalho</li>
                                     <li>Henrique de Amorim Souza</li>
                                     <li>João Vitor de Oliveira Monteiro</li>
                                     <li>Luana Bonfim Mendes Ramos</li>
                                     <li>Luis Guilherme da Silva</li>
                                     <li>Tarley Aurélio Carvalho de Melo</li>
-                                    <li>Rafael Simões Martins da Silva Oliveira  <i class="fas fa-laptop-code"></i> </li>
+                                    <li class="developer">Rafael Simões Martins da Silva Oliveira</li>
                                 </ul>
                             </div>
                         </div>
@@ -1514,10 +1329,8 @@
         </div>
     </main>
 
-    <!-- Rodapé da página -->
     <footer>
         <div class="footer-content">
-            <!-- Logos perfeitamente alinhadas no rodapé -->
             <div class="logos-container">
                 <div class="logo-item">
                     <img src="ufmt_logo.png" alt="UFMT" class="logo-ufmt">
@@ -1540,7 +1353,6 @@
         </div>
     </footer>
 
-    <!-- Scripts Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
