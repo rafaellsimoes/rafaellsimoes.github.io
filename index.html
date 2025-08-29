@@ -107,19 +107,31 @@
         h5 { color: #ffffff; font-weight: 400; font-size: 0.9rem; text-align: center; margin-bottom: 0.8rem; }
         p { margin-bottom: 1.2rem; }
         
-        .header-logos {
-            display: flex; 
-            justify-content: center; 
-            align-items: center;
-            gap: 1rem; 
-            margin-bottom: 1.5rem; 
-            flex-wrap: wrap;
-        }
-        .header-logos img {
-            height: 60px; 
-            width: auto; 
-            object-fit: contain;
-        }
+       .header-logos {
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    gap: 2rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+    padding: 1.5rem;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+ 
+@media (max-width: 768px) {
+    .header-logos {
+        gap: 1.5rem;
+        padding: 1rem;
+    }
+    
+    .header-logos img {
+        height: 50px;
+    }
+}
 
         .logo-mono { filter: brightness(0) invert(1); }
         
@@ -129,7 +141,12 @@
             display: flex; align-items: center; justify-content: center;
             color: rgba(255,255,255,0.5); font-size: 0.7rem; border-radius: 6px;
         }
-        
+        .logo-nicbr {
+           height: 50px; 
+             width: auto;       
+             object-fit: contain;
+             mix-blend-mode: lighten;
+        }
         .lead { font-size: 1.1rem; font-weight: 300; margin-bottom: 0; opacity: 0.9; }
         
         main.main-container { max-width: 1200px; margin: 0 auto; padding: 1rem; flex: 1; background: transparent; }
@@ -671,8 +688,12 @@
         
         .logos-container {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
+            gap: 1.5rem;
+            row-gap: 1.2rem;
+            flex-wrap: wrap;
+            align-content: center;
             width: 100%;
             max-width: 1000px;
             margin: 0 auto 1.5rem;
@@ -682,22 +703,90 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: flex-end;
-            flex: 1;
+            justify-content: center;
+            flex: 0 0 auto;
         }
+        .logo-item img { object-fit: contain; height: 100%; width: auto; display: block; }
         
         .logo-ufmt {
-            height: 140px;
+            height: 120px;
             filter: brightness(0) invert(1);
         }
         
         .logo-estatistica {
-            height: 140px;
+            height: 120px;
             filter: brightness(0) invert(1);
         }
         
         .logo-nic {
-            height: 180px;
+            height: 120px;
+        }
+
+        /* Header: reduzir proporção das logos */
+        header .logos-container { gap: 6rem; row-gap: 6rem; }
+        header .logo-ufmt,
+        header .logo-estatistica,
+        header .logo-nic {
+            height: 100px;
+        }
+        @media (max-width: 992px) {
+            header .logo-ufmt,
+            header .logo-estatistica,
+            header .logo-nic {
+                height: 90px;
+            }
+            header .logos-container { gap: 6rem; row-gap: 6rem; }
+        }
+        @media (max-width: 768px) {
+            header .logo-ufmt,
+            header .logo-estatistica,
+            header .logo-nic {
+                height: 80px;
+            }
+            header .logos-container { gap: 6rem; row-gap: 6rem; }
+        }
+        @media (max-width: 480px) {
+            header .logos-container { gap: 6rem; row-gap: 6rem; }
+            header .logo-ufmt,
+            header .logo-estatistica,
+            header .logo-nic {
+                height: 70px;
+            }
+        }
+
+        /* Espaçamento uniforme entre todas as logos no header via gap */
+
+        /* Footer: proporção reduzida das logos */
+        footer .logos-container {
+            gap: 6rem;
+            row-gap: 6rem;
+        }
+        footer .logo-ufmt,
+        footer .logo-estatistica,
+        footer .logo-nic {
+            height: 90px;
+        }
+        @media (max-width: 992px) {
+            footer .logo-ufmt,
+            footer .logo-estatistica,
+            footer .logo-nic {
+                height: 85px;
+            }
+        }
+        @media (max-width: 768px) {
+            footer .logo-ufmt,
+            footer .logo-estatistica,
+            footer .logo-nic {
+                height: 70px;
+            }
+        }
+        @media (max-width: 480px) {
+            footer .logos-container { gap: 7rem; row-gap: 7rem; }
+            footer .logo-ufmt,
+            footer .logo-estatistica,
+            footer .logo-nic {
+                height: 60px;
+            }
         }
         
         @media (max-width: 992px) {
@@ -707,7 +796,7 @@
             }
             
             .logo-ufmt, .logo-estatistica, .logo-nic {
-                height: 120px;
+                height: 110px;
             }
         }
         
@@ -855,10 +944,7 @@
                 <img src="estatistica_ufmt.png" alt="Estatística UFMT" class="logo-estatistica">
             </div>
             <div class="logo-item">
-                <img src="logo_nic.png" alt="NIC.br - Núcleo de Informação e Coordenação do Ponto BR" class="logo-nic">
-            </div>
-            <div class="logo-item">
-                <img src="logo_cgi.png" alt="CGI.br - Comitê Gestor da Internet no Brasil" class="logo-nic">
+                <img src="logo_conjunto_br.png" alt="CGI.br - Comitê Gestor da Internet no Brasil" class="logo-nic">
             </div>
         </div>
         
@@ -1322,7 +1408,7 @@
                                     <li>Luana Bonfim Mendes Ramos</li>
                                     <li>Luis Guilherme da Silva</li>
                                     <li>Tarley Aurélio Carvalho de Melo</li>
-                                    <li class="developer">Rafael Simões Martins da Silva Oliveira</li>
+                                    <li class="developer">Rafael Simões Martins da Silva Oliveira <i class="fas fa-laptop-code"></i></li>
                                 </ul>
                             </div>
                         </div>
@@ -1335,19 +1421,19 @@
     <footer>
         <div class="footer-content">
             <div class="logos-container">
-               <div class="logo-item">
+                <div class="logo-item">
                     <img src="ufmt_logo.png" alt="UFMT" class="logo-ufmt">
                 </div>
                 <div class="logo-item">
                     <img src="estatistica_ufmt.png" alt="Estatística UFMT" class="logo-estatistica">
                 </div>
+                
                 <div class="logo-item">
-                    <img src="logo_nic.png" alt="NIC.br - Núcleo de Informação e Coordenação do Ponto BR" class="logo-nic">
+                    <img src="logo_conjunto_br.png" alt="CGI.br - Comitê Gestor da Internet no Brasil" class="logo-nic">
                 </div>
                 <div class="logo-item">
-                    <img src="logo_cgi.png" alt="CGI.br - Comitê Gestor da Internet no Brasil" class="logo-nic">
+                    <img src="logo_fg2.png" alt="FGS" class="logo-nic">
                 </div>
-            </div>
             </div>
             
             <div class="external-links">
