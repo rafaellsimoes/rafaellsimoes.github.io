@@ -20,7 +20,7 @@
     
     <style>
         :root {
-            --primary-color: #1a4b8c; 
+            --primary-color: #0047a0; 
             --secondary-color: #2e7d32;
             --accent-color: #8bc34a;
             --text-color: #000000;   
@@ -699,6 +699,11 @@
             margin: 0 auto 1.5rem;
         }
         
+        /* Footer específico */
+        footer .logos-container {
+            margin: 0 auto 1rem;
+        }
+        
         .logo-item {
             display: flex;
             flex-direction: column;
@@ -758,34 +763,59 @@
 
         /* Footer: proporção reduzida das logos */
         footer .logos-container {
-            gap: 6rem;
-            row-gap: 6rem;
+            gap: 2rem;
+            row-gap: 1.5rem;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
         }
         footer .logo-ufmt,
         footer .logo-estatistica,
         footer .logo-nic {
-            height: 90px;
+            height: 80px;
         }
-        @media (max-width: 992px) {
+        @media (max-width: 1200px) {
+            footer .logos-container {
+                gap: 1.5rem;
+                row-gap: 1.2rem;
+            }
             footer .logo-ufmt,
             footer .logo-estatistica,
             footer .logo-nic {
-                height: 85px;
+                height: 75px;
             }
         }
-        @media (max-width: 768px) {
+        @media (max-width: 992px) {
+            footer .logos-container {
+                gap: 1.2rem;
+                row-gap: 1rem;
+            }
             footer .logo-ufmt,
             footer .logo-estatistica,
             footer .logo-nic {
                 height: 70px;
             }
         }
-        @media (max-width: 480px) {
-            footer .logos-container { gap: 7rem; row-gap: 7rem; }
+        @media (max-width: 768px) {
+            footer .logos-container {
+                gap: 1rem;
+                row-gap: 0.8rem;
+            }
             footer .logo-ufmt,
             footer .logo-estatistica,
             footer .logo-nic {
                 height: 60px;
+            }
+        }
+        @media (max-width: 480px) {
+            footer .logos-container { 
+                gap: 0.8rem; 
+                row-gap: 0.6rem; 
+            }
+            footer .logo-ufmt,
+            footer .logo-estatistica,
+            footer .logo-nic {
+                height: 50px;
             }
         }
         
@@ -944,8 +974,9 @@
                 <img src="estatistica_ufmt.png" alt="Estatística UFMT" class="logo-estatistica">
             </div>
             <div class="logo-item">
-                <img src="logo_conjunto_br.png" alt="CGI.br - Comitê Gestor da Internet no Brasil" class="logo-nic">
+                <img src="logo_conjunto_br.png" alt="NIC.br e CGI.br" class="logo-nic">
             </div>
+            
         </div>
         
         <div class="container">
@@ -1347,7 +1378,7 @@
                             <h4><i class="fas fa-user-graduate me-2"></i>Sobre as Inscrições</h4>
                             <p class="texto-branco">Inscrições gratuitas para estudantes de graduação, pós-graduação, servidores públicos, profissionais e demais interessados.
                                  Certificado de participação com carga horária.</p>
-                            <a href="https://forms.gle/rBGDkhiQyc4NFkR76" class="btn btn-success w-100 mt-2">Inscreva-se na X Semana de Estatística da UFMT  </a>
+                            <a href="#" class="btn btn-success w-100 mt-2">Inscreva-se na X Semana de Estatística da UFMT (em breve) </a>
                         </div>
                     </div>
                     
@@ -1429,10 +1460,13 @@
                 </div>
                 
                 <div class="logo-item">
-                    <img src="logo_conjunto_br.png" alt="CGI.br - Comitê Gestor da Internet no Brasil" class="logo-nic">
+                    <img src="logo_conjunto_br.png" alt="NIC.br e CGI.br" class="logo-nic">
                 </div>
                 <div class="logo-item">
                     <img src="logo_fg2.png" alt="FGS" class="logo-nic">
+                </div>
+                <div class="logo-item">
+                    <img src="lg.png" alt="ESTMT" class="logo-nic">
                 </div>
             </div>
             
