@@ -21,6 +21,7 @@
     <style>
         :root {
             --primary-color: #0047a0; 
+            --color-headers: #075007;
             --secondary-color: #2e7d32;
             --accent-color: #8bc34a;
             --text-color: #000000;   
@@ -41,7 +42,7 @@
         }
 
         header { 
-            background: var(--primary-color); 
+            background:#0048a0; 
             color: #ffffff; 
             padding: 1.5rem 0.5rem 2rem; 
             text-align: center; 
@@ -721,6 +722,11 @@
             filter: brightness(0) invert(1);
         }
         
+        .logo-ufmt-niver {
+            height: 2px;
+            filter: brightness(0);
+            height: 1%;
+        }
         .logo-estatistica {
             height: 120px;
             filter: brightness(0) invert(1);
@@ -731,36 +737,66 @@
         }
 
         /* Header: reduzir proporção das logos */
-        header .logos-container { gap: 6rem; row-gap: 6rem; }
-        header .logo-ufmt,
-        header .logo-estatistica,
-        header .logo-nic {
-            height: 100px;
-        }
-        @media (max-width: 992px) {
-            header .logo-ufmt,
-            header .logo-estatistica,
-            header .logo-nic {
-                height: 90px;
-            }
-            header .logos-container { gap: 6rem; row-gap: 6rem; }
-        }
-        @media (max-width: 768px) {
-            header .logo-ufmt,
-            header .logo-estatistica,
-            header .logo-nic {
-                height: 80px;
-            }
-            header .logos-container { gap: 6rem; row-gap: 6rem; }
-        }
-        @media (max-width: 480px) {
-            header .logos-container { gap: 6rem; row-gap: 6rem; }
-            header .logo-ufmt,
-            header .logo-estatistica,
-            header .logo-nic {
-                height: 70px;
-            }
-        }
+        /* Header: manter logos UFMT e Estatística brancas e pequenas */
+header .logos-container { 
+    gap: 4rem; 
+    row-gap: 2rem; 
+    margin: 2rem auto;
+}
+
+/* Logos UFMT e Estatística - manter brancas e pequenas */
+header .logo-ufmt,
+header .logo-estatistica {
+    height: 80px; /* Mantém pequeno */
+    width: auto;
+    object-fit: contain;
+    filter: brightness(0) invert(1); /* Mantém branco */
+}
+
+/* Apenas a UFMT Niver ajustada - não fica branca */
+header .logo-ufmt-niver {
+    height: 80px; /* Corrigido de 2px para 80px (mesmo tamanho das outras) */
+    width: auto;
+    object-fit: contain;
+     filter: brightness(1) ;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 992px) {
+    header .logos-container { 
+        gap: 3rem; 
+        row-gap: 1.5rem; 
+    }
+    header .logo-ufmt,
+    header .logo-estatistica,
+    header .logo-ufmt-niver {
+        height: 70px;
+    }
+}
+
+@media (max-width: 768px) {
+    header .logos-container { 
+        gap: 2rem; 
+        row-gap: 1rem; 
+    }
+    header .logo-ufmt,
+    header .logo-estatistica,
+    header .logo-ufmt-niver {
+        height: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    header .logos-container { 
+        gap: 1.5rem; 
+        row-gap: 0.8rem; 
+    }
+    header .logo-ufmt,
+    header .logo-estatistica,
+    header .logo-ufmt-niver {
+        height: 50px;
+    }
+}
 
         /* Espaçamento uniforme entre todas as logos no header via gap */
 
@@ -976,7 +1012,9 @@
             <div class="logo-item">
                 <img src="estatistica_ufmt.png" alt="Estatística UFMT" class="logo-estatistica">
             </div>
-            
+            <div class="logo-item">
+                <img src="ufmt_anv.png" alt="UFMT 55 Anos" class="logo-ufmt-niver">
+            </div>
             
         </div>
         
@@ -1180,7 +1218,7 @@
                                         Evidências e Políticas Públicas em tempos de IA
                                     </td>
                                     <td class="palestrante">
-                                        <span class="status-confirmado">Convidado: Dr Paulo Martunho Januzzi (ENCE/IBGE)</span>
+                                        <span class="status-confirmado">Convidado: Dr Paulo de Martino Jannuzzi (ENCE/IBGE)</span>
                                     </td>
                                 </tr>
                                 
@@ -1323,7 +1361,7 @@
                                 <span class="tipo-palestra">Palestra</span>
                                 Evidências e Políticas Públicas em tempos de IA
                             </div>
-                            <div class="palestrante-card"><i class="fas fa-user-tie"></i> <span class="status-confirmado">Convidada: Dr Paulo Martinho Januzzi (ENCE/IBGE) </span></div>
+                            <div class="palestrante-card"><i class="fas fa-user-tie"></i> <span class="status-confirmado">Convidada: Dr Paulo de Martino Jannuzzi (ENCE/IBGE) </span></div>
                         </div>
                         
                         <div class="dia-card"><i class="fas fa-calendar-alt"></i> 23 de outubro de 2025</div>
