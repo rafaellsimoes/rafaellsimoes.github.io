@@ -706,7 +706,12 @@
         /* Footer específico */
         footer .logos-container {
             margin: 0 auto 1rem;
+            display: flex;              /* organiza em linha */
+            flex-wrap: wrap;            /* permite quebrar linha se não couber */
+             justify-content: center;    /* centraliza os logos */
+            gap: 2rem;                  /* espaço entre os logos */
         }
+
         
         .logo-item {
             display: flex;
@@ -716,6 +721,9 @@
             flex: 0 0 auto;
         }
         .logo-item img { object-fit: contain; height: 100%; width: auto; display: block; }
+        .logo-item img.logo-trael {
+                max-height: 160px; /* Trael maior que os outros */
+        }
         
         .logo-ufmt {
             height: 120px;
@@ -1522,6 +1530,9 @@ header .logo-ufmt-niver {
                 </div>
                 <div class="logo-item">
                     <img src="lg.png" alt="ESTMT" class="logo-nic">
+                </div>
+                 <div class="logo-item">
+                    <img src="trael_logo_sf.png" alt="Trael" class="logo-trael">
                 </div>
             </div>
             
