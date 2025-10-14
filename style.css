@@ -21,7 +21,7 @@ body {
 }
 
 header { 
-    background:#0048a0; 
+    background: #0048a0; 
     color: #ffffff; 
     padding: 1.5rem 0.5rem 2rem; 
     text-align: center; 
@@ -43,7 +43,7 @@ h1 {
     font-family: 'Inter', 'Roboto Flex', 'Segoe UI', Arial, sans-serif;
     color: #823333;
     font-weight: 900;
-    font-size: 2.8rem; /* maior */
+    font-size: 2.8rem;
     text-align: center;
     margin-bottom: 1.2rem;
     line-height: 1.2;
@@ -71,9 +71,11 @@ h2::after {
     width: 50px; height: 3px;
     background: #1a4b8c; border-radius: 2px;
 }
-h3 {
+h3, h4 {
     font-family: 'Orbitron', monospace;
     color: #1a4b8c;
+}
+h3 {
     font-weight: 500;
     font-size: 1.4rem;
     margin-bottom: 1.2rem;
@@ -81,8 +83,6 @@ h3 {
     letter-spacing: 1px;
 }
 h4 {
-    font-family: 'Orbitron', monospace;
-    color: #1a4b8c;
     font-weight: 400;
     font-size: 1.2rem;
     margin-bottom: 0.8rem;
@@ -91,34 +91,23 @@ h4 {
 h5 { color: #ffffff; font-weight: 400; font-size: 0.9rem; text-align: center; margin-bottom: 0.8rem; }
 p { margin-bottom: 1.2rem; }
 
-.header-logos {
-display: flex; 
-justify-content: center; 
-align-items: center;
-gap: 2rem;
-margin: 2rem 0;
-flex-wrap: wrap;
-padding: 1.5rem;
-background: linear-gradient(to right, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
-border-radius: 12px;
-border: 1px solid rgba(255, 255, 255, 0.15);
-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-position: relative;
+.header-logos, .footer-logos {
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    gap: 2rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+    padding: 1.5rem;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
-
-@media (max-width: 768px) {
-.header-logos {
-    gap: 1.5rem;
-    padding: 1rem;
-}
-
-.header-logos img {
-    height: 50px;
-}
-}
+.header-logos img, .footer-logos img { height: 50px; width: auto; object-fit: contain; }
 
 .logo-mono { filter: brightness(0) invert(1); }
-
 .logo-placeholder {
     width: 140px; height: 60px; background: rgba(255,255,255,0.1);
     border: 2px dashed rgba(255,255,255,0.3);
@@ -126,10 +115,10 @@ position: relative;
     color: rgba(255,255,255,0.5); font-size: 0.7rem; border-radius: 6px;
 }
 .logo-nicbr {
-   height: 50px; 
-     width: auto;       
-     object-fit: contain;
-     mix-blend-mode: lighten;
+    height: 50px; 
+    width: auto;       
+    object-fit: contain;
+    mix-blend-mode: lighten;
 }
 .lead { font-size: 1.1rem; font-weight: 300; margin-bottom: 0; opacity: 0.9; }
 
@@ -686,15 +675,13 @@ main.main-container { max-width: 1200px; margin: 0 auto; padding: 1rem; flex: 1;
     margin: 0 auto 1.5rem;
 }
 
-/* Footer específico */
 footer .logos-container {
     margin: 0 auto 1rem;
-    display: flex;              /* organiza em linha */
-    flex-wrap: wrap;            /* permite quebrar linha se não couber */
-     justify-content: center;    /* centraliza os logos */
-    gap: 2rem;                  /* espaço entre os logos */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
 }
-
 
 .logo-item {
     display: flex;
@@ -705,7 +692,7 @@ footer .logos-container {
 }
 .logo-item img { object-fit: contain; height: 100%; width: auto; display: block; }
 .logo-item img.logo-trael {
-        max-height: 160px; /* Trael maior que os outros */
+    max-height: 160px;
 }
 
 .logo-ufmt {
@@ -727,72 +714,28 @@ footer .logos-container {
     height: 120px;
 }
 
-/* Header: reduzir proporção das logos */
-/* Header: manter logos UFMT e Estatística brancas e pequenas */
 header .logos-container { 
-gap: 4rem; 
-row-gap: 2rem; 
-margin: 2rem auto;
+    gap: 4rem; 
+    row-gap: 2rem; 
+    margin: 2rem auto;
 }
 
-/* Logos UFMT e Estatística - manter brancas e pequenas */
 header .logo-ufmt,
 header .logo-estatistica {
-height: 80px; /* Mantém pequeno */
-width: auto;
-object-fit: contain;
-filter: brightness(0) invert(1); /* Mantém branco */
+    height: 80px;
+    width: auto;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
 }
-
-/* Apenas a UFMT Niver ajustada - não fica branca */
 header .logo-ufmt-niver {
-height: 80px; /* Corrigido de 2px para 80px (mesmo tamanho das outras) */
-width: auto;
-object-fit: contain;
- filter: brightness(1) ;
+    height: 80px;
+    width: auto;
+    object-fit: contain;
+    filter: brightness(1);
 }
 
-/* Ajustes responsivos */
-@media (max-width: 992px) {
-header .logos-container { 
-    gap: 3rem; 
-    row-gap: 1.5rem; 
-}
-header .logo-ufmt,
-header .logo-estatistica,
-header .logo-ufmt-niver {
-    height: 70px;
-}
-}
-
-@media (max-width: 768px) {
-header .logos-container { 
-    gap: 2rem; 
-    row-gap: 1rem; 
-}
-header .logo-ufmt,
-header .logo-estatistica,
-header .logo-ufmt-niver {
-    height: 60px;
-}
-}
-
-@media (max-width: 480px) {
-header .logos-container { 
-    gap: 1.5rem; 
-    row-gap: 0.8rem; 
-}
-header .logo-ufmt,
-header .logo-estatistica,
-header .logo-ufmt-niver {
-    height: 50px;
-}
-}
-
-/* Espaçamento uniforme entre todas as logos no header via gap */
-
-/* Footer: proporção reduzida das logos */
 footer .logos-container {
+    margin: 0 auto 1rem;
     gap: 2rem;
     row-gap: 1.5rem;
     justify-content: center;
@@ -804,75 +747,32 @@ footer .logo-estatistica,
 footer .logo-nic {
     height: 80px;
 }
+
 @media (max-width: 1200px) {
-    footer .logos-container {
-        gap: 1.5rem;
-        row-gap: 1.2rem;
-    }
-    footer .logo-ufmt,
-    footer .logo-estatistica,
-    footer .logo-nic {
-        height: 75px;
-    }
+    footer .logos-container { gap: 1.5rem; row-gap: 1.2rem; }
+    footer .logo-ufmt, footer .logo-estatistica, footer .logo-nic { height: 75px; }
 }
 @media (max-width: 992px) {
-    footer .logos-container {
-        gap: 1.2rem;
-        row-gap: 1rem;
-    }
-    footer .logo-ufmt,
-    footer .logo-estatistica,
-    footer .logo-nic {
-        height: 70px;
-    }
+    header .logos-container { gap: 3rem; row-gap: 1.5rem; }
+    header .logo-ufmt, header .logo-estatistica, header .logo-ufmt-niver { height: 70px; }
+    footer .logos-container { gap: 1.2rem; row-gap: 1rem; }
+    footer .logo-ufmt, footer .logo-estatistica, footer .logo-nic { height: 70px; }
+    .logos-container { flex-direction: column; gap: 1.5rem; }
+    .logo-ufmt, .logo-estatistica, .logo-nic { height: 110px; }
 }
-@media (max-width: 768px) {
-    footer .logos-container {
-        gap: 1rem;
-        row-gap: 0.8rem;
-    }
-    footer .logo-ufmt,
-    footer .logo-estatistica,
-    footer .logo-nic {
-        height: 60px;
-    }
-}
-@media (max-width: 480px) {
-    footer .logos-container { 
-        gap: 0.8rem; 
-        row-gap: 0.6rem; 
-    }
-    footer .logo-ufmt,
-    footer .logo-estatistica,
-    footer .logo-nic {
-        height: 50px;
-    }
-}
-
-@media (max-width: 992px) {
-    .logos-container {
-        flex-direction: column;
-        gap: 1.5rem;
-    }
-    
-    .logo-ufmt, .logo-estatistica, .logo-nic {
-        height: 110px;
-    }
-}
-
 @media (max-width: 768px) {
     h1 { font-size: 1.8rem; letter-spacing: 1px; }
     h2 { font-size: 1.5rem; }
     h3 { font-size: 1.3rem; }
     h4 { font-size: 1.1rem; }
     .lead { font-size: 1rem; }
-    
+
     .content-section { 
         padding: 1.2rem; 
         margin-bottom: 1.2rem;
         border-radius: 10px;
     }
-    
+
     .header-logos, .footer-logos { 
         flex-direction: column; 
         gap: 0.8rem; 
@@ -880,159 +780,149 @@ footer .logo-nic {
     .header-logos img, .footer-logos img { 
         height: 50px; 
     }
-    
+
     .sidebar { 
         padding-right: 0; 
         margin-bottom: 1.5rem; 
     }
-    
+
     .btn-sidebar {
         padding: 0.7rem 1rem;
         font-size: 0.9rem;
     }
-    
+
     .texto-branco {
         font-size: 0.9rem;
     }
-    
+
     .main-container {
         padding: 0.8rem;
     }
-    
+
     .row {
         margin-left: -0.5rem;
         margin-right: -0.5rem;
     }
-    
+
     .col-lg-3, .col-lg-9, .col-md-6 {
         padding-left: 0.5rem;
         padding-right: 0.5rem;
     }
-    
+
     .programacao-table {
         display: none;
     }
-    
+
     .programacao-cards {
         display: block;
     }
-    
+
     .logos-container {
         flex-direction: column;
         gap: 1.2rem;
     }
-    
+
     .logo-ufmt, .logo-estatistica, .logo-nic {
         height: 100px;
     }
-    
+
     .btn {
         padding: 0.5rem 1rem;
         font-size: 0.9rem;
     }
 }
-
 @media (max-width: 480px) {
     h1 { font-size: 1.6rem; }
     h2 { font-size: 1.3rem; }
-    
+
     .content-section {
         padding: 1rem;
     }
-    
+
     .logo-ufmt, .logo-estatistica, .logo-nic {
         height: 80px;
     }
-    
+
     .external-links {
         flex-direction: column;
         gap: 0.5rem;
     }
-    
+
     .social-links {
         justify-content: center;
     }
-    
+
     .header-logos img {
         height: 45px;
     }
-    
+
     .footer-logos img {
         height: 40px;
     }
-    
+
     .badge-event {
         display: block;
         margin: 0.5rem 0 0 0;
         width: fit-content;
     }
-    
+
     .atividade-card {
         padding: 0.8rem;
     }
-    
+
     .legenda-programacao {
         padding: 1rem;
     }
-    
+
     .legenda-item {
         flex-direction: column;
         align-items: flex-start;
         gap: 0.4rem;
     }
-}
 
+    header .logos-container {
+        gap: 1.5rem;
+        row-gap: 0.8rem;
+    }
+    header .logo-ufmt, header .logo-estatistica, header .logo-ufmt-niver {
+        height: 50px;
+    }
+    footer .logos-container {
+        gap: 0.8rem;
+        row-gap: 0.6rem;
+    }
+    footer .logo-ufmt, footer .logo-estatistica, footer .logo-nic {
+        height: 50px;
+    }
+}
 @media (min-width: 769px) {
-    .programacao-table {
-        display: table;
-    }
-    
-    .programacao-cards {
-        display: none;
-    }
+    .programacao-table { display: table; }
+    .programacao-cards { display: none; }
 }
 
-/* --- Estilos para Palestrantes --- */
-.speaker-list {
-    margin-top: 2rem;
-}
-
+.speaker-list { margin-top: 2rem; }
 .speaker-photo {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 1rem;
-    border: 4px solid rgba(46, 125, 50, 0.2);
+    width: 120px; height: 120px; border-radius: 50%; object-fit: cover;
+    margin-bottom: 1rem; border: 4px solid rgba(46, 125, 50, 0.2);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
-
 .speaker-card {
-    background: #ffffff;
-    border-radius: 12px;
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    background: #fff; border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem;
+    display: flex; flex-direction: column; align-items: center; text-align: center;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
     border: 1px solid rgba(46, 125, 50, 0.15);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .speaker-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 25px rgba(46, 125, 50, 0.15);
 }
-
 .speaker-name {
     font-family: 'Orbitron', monospace;
-    color: var(--color-headers); /* Verde escuro: #075007 */
+    color: var(--color-headers);
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
 }
-
 .speaker-talk-title {
     font-family: 'Poppins', sans-serif;
     font-style: italic;
@@ -1042,9 +932,8 @@ footer .logo-nic {
     margin-top: 1rem;
     margin-bottom: 0.75rem;
 }
-
 .speaker-bio {
-    color: var(--secondary-color); /* Verde secundário: #2e7d32 */
+    color: var(--secondary-color);
     font-family: 'Poppins', sans-serif;
     font-size: 1rem;
     line-height: 1.6;
