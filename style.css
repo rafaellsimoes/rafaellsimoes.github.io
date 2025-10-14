@@ -72,7 +72,7 @@ h2::after {
     background: #1a4b8c; border-radius: 2px;
 }
 h3, h4 {
-    font-family: 'Orbitron', monospace;
+    font-family: 'Inter', 'Roboto Flex', 'Segoe UI', Arial, sans-serif;
     color: #1a4b8c;
 }
 h3 {
